@@ -1,0 +1,570 @@
+2025-04-20 17:55:33 INFO     web_server_daemon                 Running web server at IP 0.0.0.0:5050
+2025-04-20 17:55:33 INFO     web_server_daemon                 Initiating API
+2025-04-20 17:55:33 INFO     web_server_daemon                 Registering WebUI v2
+2025-04-20 17:55:33 INFO     scheduler                     Starting scheduler
+2025-04-20 17:55:33 INFO     web_server                    Web server started at http://172.20.0.10:5050
+2025-04-20 17:55:33 INFO     web_server                    API available at http://172.20.0.10:5050/api
+2025-04-20 17:55:33 INFO     web_server                    WebUI (v2) available at http://172.20.0.10:5050/
+2025-04-20 18:01:46 INFO     exec          sort_movies     Stdout: Codec ID                                 : A_EAC3
+ffmpeg version 5.1.4 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 12.2.1 (Alpine 12.2.1_git20220924-r4) 20220924
+  configuration: --prefix=/usr --enable-avfilter --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-gnutls --enable-gpl --enable-libass --enable-libmp3lame --enable-libpulse --enable-libvorbis --enable-libvpx --enable-libxvid --enable-libx264 --enable-libx265 --enable-libtheora --enable-libv4l2 --enable-libdav1d --enable-lto --enable-postproc --enable-pic --enable-pthreads --enable-shared --enable-libxcb --enable-librist --enable-libsrt --enable-libssh --enable-libvidstab --disable-stripping --disable-static --disable-librtmp --disable-lzma --enable-libaom --enable-libopus --enable-libsoxr --enable-libwebp --enable-vaapi --enable-vdpau --enable-vulkan --enable-libdrm --enable-libzmq --optflags=-O2 --disable-debug --enable-libsvtav1
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+Input #0, matroska,webm, from '/downloads/complete/Novocaine (2025) [Bluray 720p][Esp]/Novocaine (2025) [Bluray 720p][Esp].mkv':
+  Metadata:
+    encoder         : libebml v1.3.4 + libmatroska v1.4.5
+    creation_time   : 2025-04-12T14:27:05.000000Z
+  Duration: 01:51:47.36, start: 0.000000, bitrate: 8551 kb/s
+  Chapters:
+    Chapter #0:0: start 0.016000, end 414.055000
+      Metadata:
+        title           : Chapter 01
+    Chapter #0:1: start 414.055000, end 775.332000
+      Metadata:
+        title           : Chapter 02
+    Chapter #0:2: start 775.332000, end 1152.460000
+      Metadata:
+        title           : Chapter 03
+    Chapter #0:3: start 1152.460000, end 1483.249000
+      Metadata:
+        title           : Chapter 04
+    Chapter #0:4: start 1483.249000, end 1893.993000
+      Metadata:
+        title           : Chapter 05
+    Chapter #0:5: start 1893.993000, end 2294.852000
+      Metadata:
+        title           : Chapter 06
+    Chapter #0:6: start 2294.852000, end 2827.968000
+      Metadata:
+        title           : Chapter 07
+    Chapter #0:7: start 2827.968000, end 3520.244000
+      Metadata:
+        title           : Chapter 08
+    Chapter #0:8: start 3520.244000, end 4088.354000
+      Metadata:
+        title           : Chapter 09
+    Chapter #0:9: start 4088.354000, end 4528.252000
+      Metadata:
+        title           : Chapter 10
+    Chapter #0:10: start 4528.252000, end 4975.032000
+      Metadata:
+        title           : Chapter 11
+    Chapter #0:11: start 4975.032000, end 5273.998000
+      Metadata:
+        title           : Chapter 12
+    Chapter #0:12: start 5273.998000, end 5725.574000
+      Metadata:
+        title           : Chapter 13
+    Chapter #0:13: start 5725.574000, end 6041.766000
+      Metadata:
+        title           : Chapter 14
+    Chapter #0:14: start 6041.766000, end 6707.360000
+      Metadata:
+        title           : Chapter 15
+  Stream #0:0(spa): Video: h264 (High), yuv420p(tv, bt709, progressive), 1920x800 [SAR 1:1 DAR 12:5], 23.98 fps, 23.98 tbr, 1k tbn (default)
+    Metadata:
+      BPS             : 6740490
+      BPS-eng         : 6740490
+      DURATION        : 01:50:08.227000000
+      DURATION-eng    : 01:50:08.227000000
+      NUMBER_OF_FRAMES: 158439
+      NUMBER_OF_FRAMES-eng: 158439
+      NUMBER_OF_BYTES : 5567836285
+      NUMBER_OF_BYTES-eng: 5567836285
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:1(spa): Audio: eac3, 48000 Hz, 5.1(side), fltp, 640 kb/s
+    Metadata:
+      BPS             : 640000
+      BPS-eng         : 640000
+      DURATION        : 01:51:47.360000000
+      DURATION-eng    : 01:51:47.360000000
+      NUMBER_OF_FRAMES: 209605
+      NUMBER_OF_FRAMES-eng: 209605
+      NUMBER_OF_BYTES : 536588800
+      NUMBER_OF_BYTES-eng: 536588800
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:2(spa): Audio: ac3, 48000 Hz, 5.1(side), fltp, 640 kb/s (default)
+    Metadata:
+      BPS             : 640000
+      BPS-eng         : 640000
+      DURATION        : 01:51:47.360000000
+      DURATION-eng    : 01:51:47.360000000
+      NUMBER_OF_FRAMES: 209605
+      NUMBER_OF_FRAMES-eng: 209605
+      NUMBER_OF_BYTES : 536588800
+      NUMBER_OF_BYTES-eng: 536588800
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:3(eng): Audio: ac3, 48000 Hz, 5.1(side), fltp, 640 kb/s
+    Metadata:
+      BPS             : 640000
+      BPS-eng         : 640000
+      DURATION        : 01:49:38.624000000
+      DURATION-eng    : 01:49:38.624000000
+      NUMBER_OF_FRAMES: 205582
+      NUMBER_OF_FRAMES-eng: 205582
+      NUMBER_OF_BYTES : 526289920
+      NUMBER_OF_BYTES-eng: 526289920
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:4(spa): Subtitle: subrip (default)
+    Metadata:
+      BPS             : 0
+      BPS-eng         : 0
+      DURATION        : 01:35:57.251000000
+      DURATION-eng    : 01:35:57.251000000
+      NUMBER_OF_FRAMES: 17
+      NUMBER_OF_FRAMES-eng: 17
+      NUMBER_OF_BYTES : 449
+      NUMBER_OF_BYTES-eng: 449
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:5(spa): Subtitle: subrip
+    Metadata:
+      BPS             : 46
+      BPS-eng         : 46
+      DURATION        : 01:48:04.478000000
+      DURATION-eng    : 01:48:04.478000000
+      NUMBER_OF_FRAMES: 1293
+      NUMBER_OF_FRAMES-eng: 1293
+      NUMBER_OF_BYTES : 37744
+      NUMBER_OF_BYTES-eng: 37744
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:6(eng): Subtitle: subrip
+    Metadata:
+      BPS             : 56
+      BPS-eng         : 56
+      DURATION        : 01:40:03.389000000
+      DURATION-eng    : 01:40:03.389000000
+      NUMBER_OF_FRAMES: 1532
+      NUMBER_OF_FRAMES-eng: 1532
+      NUMBER_OF_BYTES : 42130
+      NUMBER_OF_BYTES-eng: 42130
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:7(eng): Subtitle: subrip
+    Metadata:
+      title           : SDH
+      BPS             : 65
+      BPS-eng         : 65
+      DURATION        : 01:40:49.740000000
+      DURATION-eng    : 01:40:49.740000000
+      NUMBER_OF_FRAMES: 1851
+      NUMBER_OF_FRAMES-eng: 1851
+      NUMBER_OF_BYTES : 49625
+      NUMBER_OF_BYTES-eng: 49625
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (eac3 (native) -> ac3 (native))
+  Stream #0:2 -> #0:2 (ac3 (native) -> ac3 (native))
+  Stream #0:3 -> #0:3 (ac3 (native) -> ac3 (native))
+  Stream #0:4 -> #0:4 (copy)
+  Stream #0:5 -> #0:5 (copy)
+  Stream #0:6 -> #0:6 (copy)
+  Stream #0:7 -> #0:7 (copy)
+Press [q] to stop, [?] for help
+Output #0, matroska, to '/storage/pelis/Novocaine (2025)/Novocaine (2025).mkv':
+  Metadata:
+    encoder         : Lavf59.27.100
+  Chapters:
+    Chapter #0:0: start 0.016000, end 414.055000
+      Metadata:
+        title           : Chapter 01
+    Chapter #0:1: start 414.055000, end 775.332000
+      Metadata:
+        title           : Chapter 02
+    Chapter #0:2: start 775.332000, end 1152.460000
+      Metadata:
+        title           : Chapter 03
+    Chapter #0:3: start 1152.460000, end 1483.249000
+      Metadata:
+        title           : Chapter 04
+    Chapter #0:4: start 1483.249000, end 1893.993000
+      Metadata:
+        title           : Chapter 05
+    Chapter #0:5: start 1893.993000, end 2294.852000
+      Metadata:
+        title           : Chapter 06
+    Chapter #0:6: start 2294.852000, end 2827.968000
+      Metadata:
+        title           : Chapter 07
+    Chapter #0:7: start 2827.968000, end 3520.244000
+      Metadata:
+        title           : Chapter 08
+    Chapter #0:8: start 3520.244000, end 4088.354000
+      Metadata:
+        title           : Chapter 09
+    Chapter #0:9: start 4088.354000, end 4528.252000
+      Metadata:
+        title           : Chapter 10
+    Chapter #0:10: start 4528.252000, end 4975.032000
+      Metadata:
+        title           : Chapter 11
+    Chapter #0:11: start 4975.032000, end 5273.998000
+      Metadata:
+        title           : Chapter 12
+    Chapter #0:12: start 5273.998000, end 5725.574000
+      Metadata:
+        title           : Chapter 13
+    Chapter #0:13: start 5725.574000, end 6041.766000
+      Metadata:
+        title           : Chapter 14
+    Chapter #0:14: start 6041.766000, end 6707.360000
+      Metadata:
+        title           : Chapter 15
+  Stream #0:0(spa): Video: h264 (High) (H264 / 0x34363248), yuv420p(tv, bt709, progressive), 1920x800 [SAR 1:1 DAR 12:5], q=2-31, 23.98 fps, 23.98 tbr, 1k tbn (default)
+    Metadata:
+      BPS             : 6740490
+      BPS-eng         : 6740490
+      DURATION        : 01:50:08.227000000
+      DURATION-eng    : 01:50:08.227000000
+      NUMBER_OF_FRAMES: 158439
+      NUMBER_OF_FRAMES-eng: 158439
+      NUMBER_OF_BYTES : 5567836285
+      NUMBER_OF_BYTES-eng: 5567836285
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:1(spa): Audio: ac3 ([0] [0][0] / 0x2000), 48000 Hz, 5.1(side), fltp, 640 kb/s
+    Metadata:
+      BPS             : 640000
+      BPS-eng         : 640000
+      DURATION        : 01:51:47.360000000
+      DURATION-eng    : 01:51:47.360000000
+      NUMBER_OF_FRAMES: 209605
+      NUMBER_OF_FRAMES-eng: 209605
+      NUMBER_OF_BYTES : 536588800
+      NUMBER_OF_BYTES-eng: 536588800
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      encoder         : Lavc59.37.100 ac3
+  Stream #0:2(spa): Audio: ac3 ([0] [0][0] / 0x2000), 48000 Hz, 5.1(side), fltp, 640 kb/s (default)
+    Metadata:
+      BPS             : 640000
+      BPS-eng         : 640000
+      DURATION        : 01:51:47.360000000
+      DURATION-eng    : 01:51:47.360000000
+      NUMBER_OF_FRAMES: 209605
+      NUMBER_OF_FRAMES-eng: 209605
+      NUMBER_OF_BYTES : 536588800
+      NUMBER_OF_BYTES-eng: 536588800
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      encoder         : Lavc59.37.100 ac3
+  Stream #0:3(eng): Audio: ac3 ([0] [0][0] / 0x2000), 48000 Hz, 5.1(side), fltp, 640 kb/s
+    Metadata:
+      BPS             : 640000
+      BPS-eng         : 640000
+      DURATION        : 01:49:38.624000000
+      DURATION-eng    : 01:49:38.624000000
+      NUMBER_OF_FRAMES: 205582
+      NUMBER_OF_FRAMES-eng: 205582
+      NUMBER_OF_BYTES : 526289920
+      NUMBER_OF_BYTES-eng: 526289920
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      encoder         : Lavc59.37.100 ac3
+  Stream #0:4(spa): Subtitle: subrip (default)
+    Metadata:
+      BPS             : 0
+      BPS-eng         : 0
+      DURATION        : 01:35:57.251000000
+      DURATION-eng    : 01:35:57.251000000
+      NUMBER_OF_FRAMES: 17
+      NUMBER_OF_FRAMES-eng: 17
+      NUMBER_OF_BYTES : 449
+      NUMBER_OF_BYTES-eng: 449
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:5(spa): Subtitle: subrip
+    Metadata:
+      BPS             : 46
+      BPS-eng         : 46
+      DURATION        : 01:48:04.478000000
+      DURATION-eng    : 01:48:04.478000000
+      NUMBER_OF_FRAMES: 1293
+      NUMBER_OF_FRAMES-eng: 1293
+      NUMBER_OF_BYTES : 37744
+      NUMBER_OF_BYTES-eng: 37744
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:6(eng): Subtitle: subrip
+    Metadata:
+      BPS             : 56
+      BPS-eng         : 56
+      DURATION        : 01:40:03.389000000
+      DURATION-eng    : 01:40:03.389000000
+      NUMBER_OF_FRAMES: 1532
+      NUMBER_OF_FRAMES-eng: 1532
+      NUMBER_OF_BYTES : 42130
+      NUMBER_OF_BYTES-eng: 42130
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:7(eng): Subtitle: subrip
+    Metadata:
+      title           : SDH
+      BPS             : 65
+      BPS-eng         : 65
+      DURATION        : 01:40:49.740000000
+      DURATION-eng    : 01:40:49.740000000
+      NUMBER_OF_FRAMES: 1851
+      NUMBER_OF_FRAMES-eng: 1851
+      NUMBER_OF_BYTES : 49625
+      NUMBER_OF_BYTES-eng: 49625
+      _STATISTICS_WRITING_APP: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_APP-eng: mkvmerge v10.0.0 ('To Drown In You') 64bit
+      _STATISTICS_WRITING_DATE_UTC: 2025-04-12 14:27:05
+      _STATISTICS_WRITING_DATE_UTC-eng: 2025-04-12 14:27:05
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+      _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+frame=    1 fps=0.0 q=-1.0 size=       7kB time=00:00:00.21 bitrate= 264.9kbits/s speed=45.4x    frame=  761 fps=0.0 q=-1.0 size=   25088kB time=00:00:31.99 bitrate=6423.5kbits/s speed=63.3x    frame= 1425 fps=1417 q=-1.0 size=   49152kB time=00:00:59.51 bitrate=6765.6kbits/s speed=59.2x    frame= 2017 fps=1340 q=-1.0 size=   86784kB time=00:01:24.31 bitrate=8431.9kbits/s speed=  56x    frame= 2662 fps=1327 q=-1.0 size=  122624kB time=00:01:51.22 bitrate=9031.4kbits/s speed=55.5x    frame= 3330 fps=1329 q=-1.0 size=  154368kB time=00:02:19.13 bitrate=9089.2kbits/s speed=55.5x    frame= 4066 fps=1353 q=-1.0 size=  192000kB time=00:02:49.78 bitrate=9263.7kbits/s speed=56.5x    frame= 4790 fps=1366 q=-1.0 size=  235264kB time=00:03:20.02 bitrate=9635.1kbits/s speed=57.1x    frame= 5652 fps=1411 q=-1.0 size=  283392kB time=00:03:56.02 bitrate=9835.9kbits/s speed=58.9x    frame= 6472 fps=1436 q=-1.0 size=  329984kB time=00:04:30.20 bitrate=10004.4kbits/s speed=  60x    frame= 7292 fps=1456 q=-1.0 size=  379136kB time=00:05:04.28 bitrate=10207.2kbits/s speed=60.8x    frame= 8189 fps=1487 q=-1.0 size=  413184kB time=00:05:41.65 bitrate=9907.0kbits/s speed=  62x    frame= 9049 fps=1506 q=-1.0 size=  458240kB time=00:06:17.69 bitrate=9939.1kbits/s speed=62.9x    frame= 9873 fps=1517 q=-1.0 size=  504576kB time=00:06:52.02 bitrate=10032.1kbits/s speed=63.3x    frame=10593 fps=1512 q=-1.0 size=  547840kB time=00:07:22.04 bitrate=10152.6kbits/s speed=63.1x    frame=11377 fps=1515 q=-1.0 size=  595200kB time=00:07:54.71 bitrate=10271.2kbits/s speed=63.2x    frame=12171 fps=1520 q=-1.0 size=  638976kB time=00:08:27.70 bitrate=10310.1kbits/s speed=63.4x    frame=12958 fps=1523 q=-1.0 size=  687872kB time=00:09:00.50 bitrate=10425.5kbits/s speed=63.5x    frame=13745 fps=1526 q=-1.0 size=  734208kB time=00:09:33.37 bitrate=10489.9kbits/s speed=63.7x    frame=14448 fps=1520 q=-1.0 size=  777472kB time=00:10:02.58 bitrate=10569.5kbits/s speed=63.4x    frame=15277 fps=1526 q=-1.0 size=  823296kB time=00:10:37.37 bitrate=10581.7kbits/s speed=63.7x    frame=16092 fps=1531 q=-1.0 size=  871680kB time=00:11:11.41 bitrate=10635.4kbits/s speed=63.9x    frame=16885 fps=1534 q=-1.0 size=  916480kB time=00:11:44.47 bitrate=10657.3kbits/s speed=  64x    frame=17772 fps=1544 q=-1.0 size=  963072kB time=00:12:21.46 bitrate=10640.4kbits/s speed=64.4x    frame=18649 fps=1553 q=-1.0 size=  995840kB time=00:12:58.04 bitrate=10485.2kbits/s speed=64.8x    frame=19291 fps=1542 q=-1.0 size= 1028352kB time=00:13:24.79 bitrate=10467.6kbits/s speed=64.3x    frame=19969 fps=1535 q=-1.0 size= 1070080kB time=00:13:52.85 bitrate=10525.3kbits/s speed=  64x    frame=20667 fps=1530 q=-1.0 size= 1110272kB time=00:14:22.20 bitrate=10549.0kbits/s speed=63.8x    frame=21365 fps=1525 q=-1.0 size= 1147392kB time=00:14:51.29 bitrate=10545.9kbits/s speed=63.6x    frame=22096 fps=1523 q=-1.0 size= 1179904kB time=00:15:21.85 bitrate=10485.2kbits/s speed=63.5x    frame=22783 fps=1518 q=-1.0 size= 1210112kB time=00:15:50.52 bitrate=10429.2kbits/s speed=63.3x    frame=23517 fps=1516 q=-1.0 size= 1246720kB time=00:16:20.95 bitrate=10411.4kbits/s speed=63.2x    frame=24272 fps=1516 q=-1.0 size= 1271040kB time=00:16:52.53 bitrate=10283.4kbits/s speed=63.2x    frame=24965 fps=1512 q=-1.0 size= 1301504kB time=00:17:21.53 bitrate=10236.8kbits/s speed=63.1x    frame=25596 fps=1505 q=-1.0 size= 1328640kB time=00:17:47.80 bitrate=10193.1kbits/s speed=62.8x    frame=26240 fps=1498 q=-1.0 size= 1365504kB time=00:18:14.45 bitrate=10220.8kbits/s speed=62.5x    frame=26875 fps=1492 q=-1.0 size= 1392384kB time=00:18:41.05 bitrate=10174.7kbits/s speed=62.2x    frame=27517 fps=1486 q=-1.0 size= 1425920kB time=00:19:07.70 bitrate=10177.8kbits/s speed=  62x    frame=28345 fps=1491 q=-1.0 size= 1460992kB time=00:19:42.42 bitrate=10121.9kbits/s speed=62.2x    frame=29264 fps=1500 q=-1.0 size= 1496832kB time=00:20:20.73 bitrate=10044.8kbits/s speed=62.6x    frame=30181 fps=1508 q=-1.0 size= 1528320kB time=00:20:59.00 bitrate=9944.4kbits/s speed=62.9x    frame=31100 fps=1516 q=-1.0 size= 1562880kB time=00:21:37.27 bitrate=9869.2kbits/s speed=63.2x    frame=32005 fps=1523 q=-1.0 size= 1598976kB time=00:22:15.09 bitrate=9811.1kbits/s speed=63.5x    frame=32953 fps=1532 q=-1.0 size= 1630976kB time=00:22:54.61 bitrate=9719.8kbits/s speed=63.9x    frame=33886 fps=1539 q=-1.0 size= 1659648kB time=00:23:33.40 bitrate=9619.2kbits/s speed=64.2x    frame=34640 fps=1539 q=-1.0 size= 1697280kB time=00:24:04.95 bitrate=9622.5kbits/s speed=64.2x    frame=35249 fps=1532 q=-1.0 size= 1729536kB time=00:24:30.45 bitrate=9635.3kbits/s speed=63.9x    frame=35873 fps=1526 q=-1.0 size= 1766144kB time=00:24:56.47 bitrate=9668.2kbits/s speed=63.6x    frame=36510 fps=1520 q=-1.0 size= 1804032kB time=00:25:23.06 bitrate=9703.2kbits/s speed=63.4x    frame=37145 fps=1515 q=-1.0 size= 1841664kB time=00:25:49.30 bitrate=9737.8kbits/s speed=63.2x    frame=37808 fps=1511 q=-1.0 size= 1881856kB time=00:26:17.11 bitrate=9774.9kbits/s speed=  63x    frame=38486 fps=1508 q=-1.0 size= 1921792kB time=00:26:45.37 bitrate=9806.7kbits/s speed=62.9x    frame=39085 fps=1502 q=-1.0 size= 1958912kB time=00:27:10.20 bitrate=9843.8kbits/s speed=62.7x    frame=39720 fps=1498 q=-1.0 size= 1996800kB time=00:27:36.95 bitrate=9872.2kbits/s speed=62.5x    frame=40369 fps=1494 q=-1.0 size= 2037760kB time=00:28:03.93 bitrate=9913.3kbits/s speed=62.3x    frame=40986 fps=1490 q=-1.0 size= 2074112kB time=00:28:29.69 bitrate=9938.1kbits/s speed=62.1x    frame=41610 fps=1485 q=-1.0 size= 2111488kB time=00:28:55.70 bitrate=9965.6kbits/s speed=  62x    frame=42293 fps=1483 q=-1.0 size= 2152192kB time=00:29:24.18 bitrate=9993.7kbits/s speed=61.9x    frame=42961 fps=1481 q=-1.0 size= 2187264kB time=00:29:52.02 bitrate=9998.8kbits/s speed=61.8x    frame=43577 fps=1476 q=-1.0 size= 2223104kB time=00:30:17.65 bitrate=10019.3kbits/s speed=61.6x    frame=44202 fps=1473 q=-1.0 size= 2256896kB time=00:30:43.67 bitrate=10028.1kbits/s speed=61.4x    frame=44828 fps=1469 q=-1.0 size= 2295808kB time=00:31:09.85 bitrate=10058.2kbits/s speed=61.3x    frame=45427 fps=1465 q=-1.0 size= 2329600kB time=00:31:34.77 bitrate=10071.9kbits/s speed=61.1x    frame=46049 fps=1461 q=-1.0 size= 2363904kB time=00:32:00.69 bitrate=10082.3kbits/s speed=60.9x    frame=46651 fps=1457 q=-1.0 size= 2400256kB time=00:32:25.88 bitrate=10104.9kbits/s speed=60.8x    frame=47254 fps=1453 q=-1.0 size= 2436608kB time=00:32:51.06 bitrate=10126.8kbits/s speed=60.6x    frame=47861 fps=1450 q=-1.0 size= 2473984kB time=00:33:16.47 bitrate=10151.3kbits/s speed=60.5x    frame=48572 fps=1449 q=-1.0 size= 2510080kB time=00:33:46.01 bitrate=10149.3kbits/s speed=60.4x    frame=49249 fps=1448 q=-1.0 size= 2548224kB time=00:34:14.23 bitrate=10162.0kbits/s speed=60.4x    frame=49887 fps=1445 q=-1.0 size= 2583040kB time=00:34:40.82 bitrate=10169.2kbits/s speed=60.3x    frame=50509 fps=1442 q=-1.0 size= 2618880kB time=00:35:06.68 bitrate=10183.7kbits/s speed=60.2x    frame=51141 fps=1440 q=-1.0 size= 2654976kB time=00:35:33.21 bitrate=10195.7kbits/s speed=60.1x    frame=51741 fps=1437 q=-1.0 size= 2693376kB time=00:35:58.13 bitrate=10223.7kbits/s speed=59.9x    frame=52345 fps=1433 q=-1.0 size= 2726656kB time=00:36:23.51 bitrate=10229.7kbits/s speed=59.8x    frame=53179 fps=1437 q=-1.0 size= 2769920kB time=00:36:58.20 bitrate=10229.5kbits/s speed=59.9x    frame=53885 fps=1436 q=-1.0 size= 2797056kB time=00:37:27.77 bitrate=10193.9kbits/s speed=59.9x    frame=54553 fps=1435 q=-1.0 size= 2820352kB time=00:37:55.51 bitrate=10153.4kbits/s speed=59.9x    frame=55177 fps=1432 q=-1.0 size= 2848768kB time=00:38:21.65 bitrate=10139.3kbits/s speed=59.8x    frame=55862 fps=1432 q=-1.0 size= 2884864kB time=00:38:50.10 bitrate=10142.4kbits/s speed=59.7x    frame=56522 fps=1430 q=-1.0 size= 2924032kB time=00:39:17.62 bitrate=10160.1kbits/s speed=59.7x    frame=57237 fps=1430 q=-1.0 size= 2962944kB time=00:39:47.54 bitrate=10166.3kbits/s speed=59.7x    frame=57883 fps=1429 q=-1.0 size= 2999040kB time=00:40:14.39 bitrate=10175.7kbits/s speed=59.6x    frame=58303 fps=1421 q=-1.0 size= 3022848kB time=00:40:31.93 bitrate=10182.5kbits/s speed=59.3x    frame=59139 fps=1424 q=-1.0 size= 3066624kB time=00:41:06.68 bitrate=10184.4kbits/s speed=59.4x    frame=59885 fps=1425 q=-1.0 size= 3097856kB time=00:41:37.97 bitrate=10159.3kbits/s speed=59.4x    frame=60668 fps=1427 q=-1.0 size= 3134464kB time=00:42:10.49 bitrate=10147.3kbits/s speed=59.5x    frame=61435 fps=1428 q=-1.0 size= 3168768kB time=00:42:42.52 bitrate=10130.1kbits/s speed=59.6x    frame=62209 fps=1429 q=-1.0 size= 3211520kB time=00:43:14.58 bitrate=10139.9kbits/s speed=59.6x    frame=62929 fps=1430 q=-1.0 size= 3251968kB time=00:43:44.85 bitrate=10149.2kbits/s speed=59.6x    frame=63634 fps=1429 q=-1.0 size= 3293184kB time=00:44:14.36 bitrate=10163.6kbits/s speed=59.6x    frame=64416 fps=1431 q=-1.0 size= 3339008kB time=00:44:46.65 bitrate=10181.1kbits/s speed=59.7x    frame=65208 fps=1432 q=-1.0 size= 3382784kB time=00:45:19.70 bitrate=10189.2kbits/s speed=59.7x    frame=65921 fps=1432 q=-1.0 size= 3426560kB time=00:45:49.72 bitrate=10208.4kbits/s speed=59.7x    frame=66708 fps=1434 q=-1.0 size= 3472384kB time=00:46:22.52 bitrate=10223.0kbits/s speed=59.8x    frame=67527 fps=1436 q=-1.0 size= 3522304kB time=00:46:56.69 bitrate=10244.2kbits/s speed=59.9x    frame=68298 fps=1437 q=-1.0 size= 3565312kB time=00:47:28.82 bitrate=10252.3kbits/s speed=59.9x    frame=69065 fps=1438 q=-1.0 size= 3591424kB time=00:48:00.82 bitrate=10212.7kbits/s speed=  60x    frame=69829 fps=1439 q=-1.0 size= 3616256kB time=00:48:32.73 bitrate=10170.7kbits/s speed=  60x    frame=70599 fps=1440 q=-1.0 size= 3641600kB time=00:49:04.69 bitrate=10130.7kbits/s speed=60.1x    frame=71329 fps=1440 q=-1.0 size= 3664128kB time=00:49:35.19 bitrate=10088.9kbits/s speed=60.1x    frame=72053 fps=1440 q=-1.0 size= 3692032kB time=00:50:05.37 bitrate=10063.7kbits/s speed=60.1x    frame=72817 fps=1441 q=-1.0 size= 3721216kB time=00:50:37.24 bitrate=10036.8kbits/s speed=60.1x    frame=73648 fps=1443 q=-1.0 size= 3741440kB time=00:51:12.05 bitrate=9977.0kbits/s speed=60.2x    frame=74491 fps=1446 q=-1.0 size= 3760896kB time=00:51:47.06 bitrate=9915.9kbits/s speed=60.3x    frame=75348 fps=1448 q=-1.0 size= 3785216kB time=00:52:22.74 bitrate=9866.7kbits/s speed=60.4x    frame=76118 fps=1449 q=-1.0 size= 3809536kB time=00:52:55.00 bitrate=9829.2kbits/s speed=60.4x    frame=76883 fps=1450 q=-1.0 size= 3840768kB time=00:53:26.97 bitrate=9811.0kbits/s speed=60.5x    frame=77659 fps=1451 q=-1.0 size= 3884800kB time=00:53:59.22 bitrate=9824.7kbits/s speed=60.5x    frame=78401 fps=1451 q=-1.0 size= 3908864kB time=00:54:30.17 bitrate=9792.0kbits/s speed=60.5x    frame=79043 fps=1450 q=-1.0 size= 3935488kB time=00:54:56.95 bitrate=9778.6kbits/s speed=60.5x    frame=79671 fps=1448 q=-1.0 size= 3965696kB time=00:55:23.16 bitrate=9775.9kbits/s speed=60.4x    frame=80275 fps=1446 q=-1.0 size= 3994880kB time=00:55:48.34 bitrate=9773.8kbits/s speed=60.3x    frame=80917 fps=1444 q=-1.0 size= 4024832kB time=00:56:15.13 bitrate=9768.9kbits/s speed=60.2x    frame=81546 fps=1443 q=-1.0 size= 4052736kB time=00:56:41.27 bitrate=9761.0kbits/s speed=60.2x    frame=82215 fps=1442 q=-1.0 size= 4080640kB time=00:57:09.37 bitrate=9747.7kbits/s speed=60.1x    frame=82913 fps=1441 q=-1.0 size= 4104960kB time=00:57:38.45 bitrate=9723.4kbits/s speed=60.1x    frame=83646 fps=1441 q=-1.0 size= 4125440kB time=00:58:08.95 bitrate=9686.5kbits/s speed=60.1x    frame=84420 fps=1442 q=-1.0 size= 4150272kB time=00:58:41.27 bitrate=9655.3kbits/s speed=60.2x    frame=85253 fps=1444 q=-1.0 size= 4178176kB time=00:59:16.02 bitrate=9625.2kbits/s speed=60.2x    frame=85984 fps=1444 q=-1.0 size= 4204032kB time=00:59:46.36 bitrate=9602.9kbits/s speed=60.2x    frame=86733 fps=1445 q=-1.0 size= 4242176kB time=01:00:17.59 bitrate=9606.4kbits/s speed=60.3x    frame=87553 fps=1446 q=-1.0 size= 4283136kB time=01:00:51.86 bitrate=9608.1kbits/s speed=60.3x    frame=88338 fps=1447 q=-1.0 size= 4313856kB time=01:01:24.66 bitrate=9590.9kbits/s speed=60.4x    frame=89174 fps=1449 q=-1.0 size= 4342016kB time=01:01:59.48 bitrate=9563.1kbits/s speed=60.4x    frame=90025 fps=1451 q=-1.0 size= 4367872kB time=01:02:34.97 bitrate=9529.1kbits/s speed=60.5x    frame=90869 fps=1453 q=-1.0 size= 4392192kB time=01:03:10.26 bitrate=9493.0kbits/s speed=60.6x    frame=91603 fps=1453 q=-1.0 size= 4418304kB time=01:03:40.82 bitrate=9473.0kbits/s speed=60.6x    frame=92418 fps=1455 q=-1.0 size= 4446464kB time=01:04:14.84 bitrate=9449.3kbits/s speed=60.7x    frame=93287 fps=1457 q=-1.0 size= 4473088kB time=01:04:51.13 bitrate=9417.2kbits/s speed=60.8x    frame=94145 fps=1459 q=-1.0 size= 4501504kB time=01:05:26.93 bitrate=9390.6kbits/s speed=60.9x    frame=94999 fps=1461 q=-1.0 size= 4532736kB time=01:06:02.45 bitrate=9371.0kbits/s speed=60.9x    frame=95825 fps=1462 q=-1.0 size= 4556800kB time=01:06:36.98 bitrate=9339.4kbits/s speed=  61x    frame=96703 fps=1464 q=-1.0 size= 4580352kB time=01:07:13.46 bitrate=9302.7kbits/s speed=61.1x    frame=97549 fps=1466 q=-1.0 size= 4607488kB time=01:07:48.79 bitrate=9276.6kbits/s speed=61.2x    frame=98396 fps=1468 q=-1.0 size= 4633600kB time=01:08:24.09 bitrate=9248.9kbits/s speed=61.2x    frame=99204 fps=1469 q=-1.0 size= 4657920kB time=01:08:57.65 bitrate=9222.0kbits/s speed=61.3x    frame=99985 fps=1470 q=-1.0 size= 4686080kB time=01:09:30.39 bitrate=9205.0kbits/s speed=61.3x    frame=100844 fps=1471 q=-1.0 size= 4716800kB time=01:10:06.17 bitrate=9186.5kbits/s speed=61.4x    frame=101640 fps=1472 q=-1.0 size= 4744192kB time=01:10:39.48 bitrate=9167.3kbits/s speed=61.4x    frame=102481 fps=1474 q=-1.0 size= 4769024kB time=01:11:14.33 bitrate=9140.1kbits/s speed=61.5x    frame=103226 fps=1474 q=-1.0 size= 4792832kB time=01:11:45.56 bitrate=9119.1kbits/s speed=61.5x    frame=103889 fps=1473 q=-1.0 size= 4817920kB time=01:12:13.33 bitrate=9108.1kbits/s speed=61.4x    frame=104528 fps=1472 q=-1.0 size= 4843264kB time=01:12:40.02 bitrate=9099.9kbits/s speed=61.4x    frame=105154 fps=1470 q=-1.0 size= 4874240kB time=01:13:05.78 bitrate=9104.4kbits/s speed=61.3x    frame=105762 fps=1468 q=-1.0 size= 4903936kB time=01:13:31.41 bitrate=9106.6kbits/s speed=61.2x    frame=106477 fps=1468 q=-1.0 size= 4928512kB time=01:14:01.17 bitrate=9090.9kbits/s speed=61.2x    frame=107306 fps=1469 q=-1.0 size= 4953088kB time=01:14:35.73 bitrate=9065.7kbits/s speed=61.3x    frame=108196 fps=1471 q=-1.0 size= 4977664kB time=01:15:12.95 bitrate=9035.5kbits/s speed=61.4x    frame=108943 fps=1471 q=-1.0 size= 4997632kB time=01:15:43.93 bitrate=9010.0kbits/s speed=61.4x    frame=109568 fps=1470 q=-1.0 size= 5022208kB time=01:16:10.10 bitrate=9002.4kbits/s speed=61.3x    frame=110191 fps=1469 q=-1.0 size= 5060352kB time=01:16:36.15 bitrate=9019.4kbits/s speed=61.3x    frame=110829 fps=1467 q=-1.0 size= 5097984kB time=01:17:02.58 bitrate=9034.5kbits/s speed=61.2x    frame=111624 fps=1468 q=-1.0 size= 5121792kB time=01:17:35.70 bitrate=9012.1kbits/s speed=61.2x    frame=112387 fps=1468 q=-1.0 size= 5154560kB time=01:18:07.67 bitrate=9007.9kbits/s speed=61.2x    frame=113257 fps=1470 q=-1.0 size= 5181440kB time=01:18:43.96 bitrate=8985.3kbits/s speed=61.3x    frame=114089 fps=1471 q=-1.0 size= 5204736kB time=01:19:18.74 bitrate=8959.8kbits/s speed=61.4x    frame=114857 fps=1472 q=-1.0 size= 5229312kB time=01:19:50.77 bitrate=8941.9kbits/s speed=61.4x    frame=115534 fps=1471 q=-1.0 size= 5251584kB time=01:20:18.77 bitrate=8927.8kbits/s speed=61.4x    frame=116196 fps=1470 q=-1.0 size= 5276416kB time=01:20:46.55 bitrate=8918.6kbits/s speed=61.3x    frame=116857 fps=1469 q=-1.0 size= 5312512kB time=01:21:14.10 bitrate=8928.8kbits/s speed=61.3x    frame=117555 fps=1469 q=-1.0 size= 5340416kB time=01:21:43.13 bitrate=8922.6kbits/s speed=61.3x    frame=118373 fps=1470 q=-1.0 size= 5369600kB time=01:22:17.37 bitrate=8909.1kbits/s speed=61.3x    frame=119092 fps=1470 q=-1.0 size= 5397248kB time=01:22:47.45 bitrate=8900.8kbits/s speed=61.3x    frame=119873 fps=1470 q=-1.0 size= 5428736kB time=01:23:19.99 bitrate=8894.4kbits/s speed=61.3x    frame=120557 fps=1470 q=-1.0 size= 5458944kB time=01:23:48.41 bitrate=8893.4kbits/s speed=61.3x    frame=121165 fps=1468 q=-1.0 size= 5493248kB time=01:24:13.65 bitrate=8904.6kbits/s speed=61.2x    frame=121825 fps=1467 q=-1.0 size= 5528576kB time=01:24:41.08 bitrate=8913.5kbits/s speed=61.2x    frame=122489 fps=1466 q=-1.0 size= 5565184kB time=01:25:09.05 bitrate=8923.4kbits/s speed=61.2x    frame=123119 fps=1465 q=-1.0 size= 5593088kB time=01:25:35.09 bitrate=8922.6kbits/s speed=61.1x    frame=123739 fps=1464 q=-1.0 size= 5626624kB time=01:26:00.98 bitrate=8931.1kbits/s speed=  61x    frame=124356 fps=1462 q=-1.0 size= 5664000kB time=01:26:26.68 bitrate=8945.9kbits/s speed=  61x    frame=124945 fps=1461 q=-1.0 size= 5700608kB time=01:26:51.45 bitrate=8960.9kbits/s speed=60.9x    frame=125560 fps=1459 q=-1.0 size= 5732864kB time=01:27:17.11 bitrate=8967.5kbits/s speed=60.9x    frame=126175 fps=1458 q=-1.0 size= 5769216kB time=01:27:42.77 bitrate=8980.3kbits/s speed=60.8x    frame=126795 fps=1457 q=-1.0 size= 5801472kB time=01:28:08.60 bitrate=8986.4kbits/s speed=60.8x    frame=127433 fps=1456 q=-1.0 size= 5839872kB time=01:28:35.25 bitrate=9000.5kbits/s speed=60.7x    frame=128035 fps=1454 q=-1.0 size= 5873664kB time=01:29:00.34 bitrate=9010.1kbits/s speed=60.7x    frame=128632 fps=1453 q=-1.0 size= 5910784kB time=01:29:25.30 bitrate=9024.9kbits/s speed=60.6x    frame=129293 fps=1452 q=-1.0 size= 5946368kB time=01:29:52.79 bitrate=9032.9kbits/s speed=60.6x    frame=130043 fps=1452 q=-1.0 size= 5980416kB time=01:30:24.15 bitrate=9032.1kbits/s speed=60.6x    frame=130652 fps=1451 q=-1.0 size= 6016000kB time=01:30:49.43 bitrate=9043.7kbits/s speed=60.5x    frame=131325 fps=1450 q=-1.0 size= 6048000kB time=01:31:17.40 bitrate=9045.4kbits/s speed=60.5x    frame=132141 fps=1451 q=-1.0 size= 6074624kB time=01:31:51.48 bitrate=9029.0kbits/s speed=60.5x    frame=132773 fps=1450 q=-1.0 size= 6099968kB time=01:32:17.88 bitrate=9023.5kbits/s speed=60.5x    frame=133437 fps=1450 q=-1.0 size= 6125056kB time=01:32:45.53 bitrate=9015.6kbits/s speed=60.5x    frame=134065 fps=1449 q=-1.0 size= 6148352kB time=01:33:11.73 bitrate=9007.4kbits/s speed=60.4x    frame=134692 fps=1448 q=-1.0 size= 6179072kB time=01:33:37.91 bitrate=9010.3kbits/s speed=60.4x    frame=135305 fps=1446 q=-1.0 size= 6208000kB time=01:34:03.61 bitrate=9011.2kbits/s speed=60.3x    frame=136022 fps=1446 q=-1.0 size= 6238208kB time=01:34:33.33 bitrate=9007.6kbits/s speed=60.3x    frame=136746 fps=1446 q=-1.0 size= 6276864kB time=01:35:03.67 bitrate=9015.3kbits/s speed=60.3x    frame=137511 fps=1447 q=-1.0 size= 6301440kB time=01:35:35.67 bitrate=9000.1kbits/s speed=60.3x    frame=138341 fps=1448 q=-1.0 size= 6345984kB time=01:36:10.23 bitrate=9009.4kbits/s speed=60.4x    frame=139177 fps=1449 q=-1.0 size= 6391296kB time=01:36:45.01 bitrate=9019.3kbits/s speed=60.4x    frame=139992 fps=1450 q=-1.0 size= 6448640kB time=01:37:19.06 bitrate=9047.2kbits/s speed=60.5x    frame=140865 fps=1451 q=-1.0 size= 6486784kB time=01:37:55.57 bitrate=9044.2kbits/s speed=60.5x    frame=141701 fps=1452 q=-1.0 size= 6537472kB time=01:38:30.39 bitrate=9061.1kbits/s speed=60.6x    frame=142555 fps=1454 q=-1.0 size= 6582272kB time=01:39:05.91 bitrate=9068.7kbits/s speed=60.6x    frame=143332 fps=1454 q=-1.0 size= 6624768kB time=01:39:38.45 bitrate=9077.6kbits/s speed=60.7x    frame=144115 fps=1455 q=-1.0 size= 6663936kB time=01:40:11.00 bitrate=9081.8kbits/s speed=60.7x    frame=144810 fps=1455 q=-1.0 size= 6699264kB time=01:40:39.96 bitrate=9086.2kbits/s speed=60.7x    frame=145489 fps=1454 q=-1.0 size= 6723072kB time=01:41:08.09 bitrate=9076.2kbits/s speed=60.6x    frame=146155 fps=1453 q=-1.0 size= 6730240kB time=01:41:35.93 bitrate=9044.4kbits/s speed=60.6x    frame=146815 fps=1453 q=-1.0 size= 6737408kB time=01:42:03.64 bitrate=9013.1kbits/s speed=60.6x    frame=147505 fps=1452 q=-1.0 size= 6745088kB time=01:42:32.37 bitrate=8981.2kbits/s speed=60.6x    frame=148177 fps=1452 q=-1.0 size= 6757120kB time=01:43:00.37 bitrate=8956.5kbits/s speed=60.6x    frame=148836 fps=1451 q=-1.0 size= 6771968kB time=01:43:27.93 bitrate=8936.3kbits/s speed=60.5x    frame=149575 fps=1451 q=-1.0 size= 6788608kB time=01:43:58.71 bitrate=8914.1kbits/s speed=60.5x    frame=150251 fps=1451 q=-1.0 size= 6804224kB time=01:44:27.00 bitrate=8894.2kbits/s speed=60.5x    frame=150865 fps=1450 q=-1.0 size= 6818816kB time=01:44:52.47 bitrate=8877.2kbits/s speed=60.5x    frame=151513 fps=1449 q=-1.0 size= 6832128kB time=01:45:19.57 bitrate=8856.4kbits/s speed=60.4x    frame=152186 fps=1449 q=-1.0 size= 6846720kB time=01:45:47.41 bitrate=8836.4kbits/s speed=60.4x    frame=152893 fps=1448 q=-1.0 size= 6864128kB time=01:46:17.11 bitrate=8817.6kbits/s speed=60.4x    frame=153545 fps=1448 q=-1.0 size= 6878464kB time=01:46:44.31 bitrate=8798.5kbits/s speed=60.4x    frame=154279 fps=1448 q=-1.0 size= 6895360kB time=01:47:14.90 bitrate=8778.2kbits/s speed=60.4x    frame=155227 fps=1450 q=-1.0 size= 6917632kB time=01:47:54.45 bitrate=8752.7kbits/s speed=60.5x    frame=156011 fps=1450 q=-1.0 size= 6937088kB time=01:48:27.09 bitrate=8733.3kbits/s speed=60.5x    frame=156721 fps=1450 q=-1.0 size= 6956544kB time=01:48:56.76 bitrate=8718.1kbits/s speed=60.5x    frame=157489 fps=1451 q=-1.0 size= 6972928kB time=01:49:28.79 bitrate=8696.0kbits/s speed=60.5x    frame=158439 fps=1453 q=-1.0 size= 6993920kB time=01:50:47.25 bitrate=8619.2kbits/s speed=60.9x    [matroska @ 0x79bdc4dc80c0] Starting new cluster due to timestamp
+frame=158439 fps=1448 q=-1.0 Lsize= 7005229kB time=01:51:47.35 bitrate=8555.8kbits/s speed=61.3x    
+video:5437340kB audio:1561980kB subtitle:127kB other streams:0kB global headers:0kB muxing overhead: 0.082600%
+2025-04-20 18:03:03 INFO     manager                       Got SIGTERM. Shutting down.
+2025-04-20 18:03:04 INFO     web_server                    Shutting down web server
+2025-04-20 18:03:14 INFO     web_server_daemon                 Running web server at IP 0.0.0.0:5050
+2025-04-20 18:03:14 INFO     web_server_daemon                 Initiating API
+2025-04-20 18:03:14 INFO     web_server_daemon                 Registering WebUI v2
+2025-04-20 18:03:14 INFO     scheduler                     Starting scheduler
+2025-04-20 18:03:14 INFO     web_server                    Web server started at http://172.20.0.5:5050
+2025-04-20 18:03:14 INFO     web_server                    API available at http://172.20.0.5:5050/api
+2025-04-20 18:03:14 INFO     web_server                    WebUI (v2) available at http://172.20.0.5:5050/
+2025-04-20 18:25:33 INFO     manager       eztvrss         Running database cleanup.
+2025-04-20 18:25:33 INFO     db_analyze    eztvrss         Running ANALYZE on database to improve performance.
+2025-04-20 18:25:33 INFO     db_vacuum     eztvrss         Running VACUUM on database to improve performance and decrease db size.
+2025-04-20 18:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 18:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 18:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 18:25:34 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 18:25:34 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 18:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 18:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 18:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 18:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 18:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 19:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 19:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 19:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 19:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 19:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 19:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 19:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 19:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 19:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 19:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 20:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 20:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 20:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 20:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 20:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 20:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 20:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 20:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 20:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 20:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 21:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 21:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 21:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 21:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 21:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 21:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 21:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 21:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 21:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 21:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 22:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 22:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 22:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 22:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 22:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 22:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 22:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 22:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 22:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 22:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 23:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 23:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 23:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 23:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 23:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-20 23:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-20 23:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-20 23:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-20 23:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-20 23:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 00:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 00:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 00:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 00:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 00:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 00:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 00:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 00:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 00:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 00:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 01:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 01:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 01:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 01:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 01:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 01:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 01:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 01:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 01:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 01:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 02:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 02:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 02:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 02:25:35 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 02:25:35 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 02:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 02:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 02:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 02:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 02:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 03:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 03:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 03:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 03:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 03:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 03:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 03:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 03:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 03:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 03:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 04:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 04:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 04:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 04:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 04:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 04:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 04:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 04:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 04:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 04:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 05:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 05:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 05:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 05:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 05:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 05:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 05:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 05:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 05:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 05:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 06:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 06:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 06:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 06:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 06:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 06:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 06:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 06:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 06:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 06:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 07:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 07:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 07:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 07:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 07:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 07:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 07:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 07:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 07:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 07:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 08:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 08:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 08:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 08:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 08:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 08:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 08:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 08:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 08:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 08:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 09:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 09:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 09:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 09:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 09:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 09:55:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 09:55:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 09:55:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 09:55:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 09:55:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)
+2025-04-21 10:25:33 CRITICAL rss           eztvrss         I have saved the invalid content to /config/received/eztvrss-eztv.to.xml for you to view
+2025-04-21 10:25:33 CRITICAL plugin        eztvrss         Received invalid RSS content from task eztvrss (https://eztv.to/ezrss.xml)
+2025-04-21 10:25:33 WARNING  task          eztvrss         Aborting task (plugin: rss)
+2025-04-21 10:25:33 CRITICAL plugin        remove_stale_torrents Error connecting to transmission: transmission daemon require auth
+2025-04-21 10:25:33 WARNING  task          remove_stale_torrents Aborting task (plugin: from_transmission)

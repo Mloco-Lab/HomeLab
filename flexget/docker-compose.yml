@@ -1,0 +1,39 @@
+# version: "1.0"
+
+services:
+
+  flexget:
+    image: flexget-custom
+    container_name: flexget
+    restart: unless-stopped
+    networks:
+      kronos-net:
+
+    volumes:
+      - ${FLEX_config}:/config
+      - ${FLEX_config}/custom-cont-init.d:/custom-cont-init.d:ro
+      - ${STORAGE}/torrents:/downloads
+      - ${MEDIA}:/storage
+    ports:
+      - 5050:5050
+    environment:
+      - TZ=${FLEX_TZ}
+      - PUID=${FLEX_PUID}
+      - PGID=${FLEX_PGID}
+      - TORRENT_PLUGIN=${FLEX_TORRENT_PLUGIN}
+      - FG_WEBUI_PASSWD=${FLEX_FG_WEBUI_PASSWD}
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.flexget.entrypoints=https"
+      - "traefik.http.routers.flexget.rule=Host(`$FLEX_URL`)"
+      - "traefik.http.routers.flexget.tls=true"
+      - "traefik.http.routers.flexget.tls.certresolver=myresolver"
+      - "traefik.http.routers.flexget.service=flexget"
+      - "traefik.http.services.flexget.loadbalancer.server.port=5050"
+
+networks:
+  kronos-net:
+    external: true
+
+

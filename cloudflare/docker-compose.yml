@@ -1,0 +1,20 @@
+#version: '1'
+services:
+  cloudflare-ddns:
+    image: oznu/cloudflare-ddns:latest
+    container_name: cloudflare-ddns
+    restart: always
+    environment:
+      API_KEY: ${CLOUDFLARE_API_KEY}
+      ZONE: ${CLOUDFLARE_ZONE}
+      SUBDOMAIN: ddns
+      PROXIED: false
+    env_file:
+      - .env
+    networks:
+      kronos-net:
+
+networks:
+  kronos-net:
+    external: true
+
