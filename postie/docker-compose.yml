@@ -1,0 +1,71 @@
+# version: '1'
+
+services:
+
+  mailserver:
+    image: analogic/poste.io
+    container_name: postie
+    restart: unless-stopped
+    environment:
+      - TZ=${POSTEIO_TZ}
+      - h=${POSTEIO_HOSTNAME} # Direccion del servidor de mail hosting
+      - DISABLE_CLAMAV=TRUE
+      - DISABLE_LETSENCRYPT=TRUE
+      - HTTPS=OFF
+
+    volumes:
+      - ${POSTEIO_BASE_DADOS}:/data
+
+    labels:
+      - "traefik.enable=true"
+
+      # HTTP
+      - "traefik.http.routers.mailserver.rule=Host(`${POSTEIO_HOSTNAME}`)"
+      - "traefik.http.routers.mailserver.entrypoints=http"
+      - "traefik.http.routers.mailserver.service=mailserver"
+      - "traefik.http.routers.mailserver.tls=true"
+      - "traefik.http.services.mailserver.loadbalancer.server.port=80"
+
+      # HTTPS
+      - "traefik.http.routers.mailserver-secure.entrypoints=https"
+      - "traefik.http.routers.mailserver-secure.rule=Host(`${POSTEIO_HOSTNAME}`)"
+      - "traefik.http.routers.mailserver-secure.service=mailserver"
+      - "traefik.http.routers.mailserver-secure.tls=true"
+      - "traefik.http.services.mailserver-secure.loadbalancer.server.port=443"
+      - "traefik.http.routers.mailserver-secure.tls.certresolver=myresolver" # Assuming your Traefik is configured with a certresolver named 'le'
+
+      # Mail ports
+
+      # SMTP
+
+      - "traefik.tcp.routers.smtp.rule=HostSNI(`*`)"
+      - "traefik.tcp.routers.smtp.entrypoints=smtp"
+      - "traefik.tcp.services.smtp.loadbalancer.server.port=25"
+      - "traefik.tcp.routers.smtp.service=smtp"
+
+      # SUBIMISSION
+
+      - "traefik.tcp.routers.smtpss.rule=HostSNI(`*`)"
+      - "traefik.tcp.routers.smtpss.entrypoints=smtpss"
+      - "traefik.tcp.services.smtpss.loadbalancer.server.port=587"
+      - "traefik.tcp.routers.smtpss.service=smtp"
+
+      # IMAP
+
+      - "traefik.tcp.routers.imaps.rule=HostSNI(`*`)"
+      - "traefik.tcp.routers.imaps.entrypoints=imaps"
+      - "traefik.tcp.services.imaps.loadbalancer.server.port=993"
+      - "traefik.tcp.routers.imaps.service=imaps"
+
+
+    networks:
+      kronos-net:
+
+    ports:
+      - "25:25"
+      - "587:587"
+      - "993:993"
+
+networks:
+  kronos-net:
+    external: true

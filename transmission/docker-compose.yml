@@ -1,0 +1,33 @@
+#version: "1"
+
+services:
+
+  transmission:
+    image : jaymoulin/transmission:3.00-1.6.1
+    container_name: transmission
+    restart: unless-stopped
+    command: transmission-daemon -f -g /config
+    networks:
+      kronos-net:
+
+    ports:
+      - 9091:9091
+      - 51413:51413
+      - 51413:51413/udp
+
+    volumes:
+      - ./transmission:/config
+      - ${TRANS_STORANGE}:/downloads
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.transmission.entrypoints=https"
+      - "traefik.http.routers.transmission.rule=Host(`$TRANS_URL`)"
+      - "traefik.http.routers.transmission.tls=true"
+      - "traefik.http.routers.transmission.tls.certresolver=myresolver"
+      - "traefik.http.routers.transmission.service=transmission"
+      - "traefik.http.services.transmission.loadbalancer.server.port=9091"
+
+networks:
+  kronos-net:
+    external: true
