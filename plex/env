@@ -15,8 +15,8 @@ PLEX_TZ=*****
 
 # Variables de configuración para el contenedor Plex
 PLEX_PLEX_CLAIM=*****
-PLEX_ADVERTISE_IP=https://plex.example.com:443
+PLEX_ADVERTISE_IP=*****
 PLEX_CHANGE_CONFIG_DIR_OWNERSHIP=*****
 
 # URL de la API de Plex
-PLEX_HOST=plex.example.com
+PLEX_HOST=*****

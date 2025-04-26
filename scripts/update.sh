@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script de actualización automatizada para Kronos Server
+# Script de actualización automatizada para el Servidor
 # Realiza actualizaciones seguras con respaldo previo y verificaciones posteriores
 
 # Colores para output
@@ -11,7 +11,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 # Directorio base
-BASE_DIR="/home/mloco/kronos-server"
+BASE_DIR="/home/mloco/servidor"
 BACKUP_DIR="${BASE_DIR}/backups/pre-update/$(date +%Y%m%d_%H%M%S)"
 
 # Función para logging

@@ -1,0 +1,10 @@
+# Archivo de configuración para el servicio correspondiente
+
+# Variables de entorno para la API de Cloudflare
+# Reemplaza los valores de las variables con tus credenciales de Cloudflare
+
+# Puedes obtener tu API Token en https://dash.cloudflare.com/profile/api-tokens
+CLOUDFLARE_API_KEY=*****
+
+# Url de la API de Cloudflare
+CLOUDFLARE_ZONE=*****

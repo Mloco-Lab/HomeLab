@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Primero iniciamos la red
-echo "Iniciando red kronos-net..."
+echo "Iniciando red servidor-net..."
 cd networks && docker-compose up -d
 
 # Iniciamos Traefik primero ya que es el proxy inverso

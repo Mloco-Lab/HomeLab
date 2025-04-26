@@ -1,6 +1,6 @@
-# Documentación de Kronos Server
+# Documentación del Servidor
 
-Esta documentación proporciona información detallada sobre todos los servicios que componen Kronos Server, su configuración, mantenimiento y uso.
+Esta documentación proporciona información detallada sobre todos los servicios que componen el Servidor, su configuración, mantenimiento y uso.
 
 ## Índice
 

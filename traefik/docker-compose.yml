@@ -7,7 +7,7 @@ services:
     security_opt:
       - no-new-privileges:true
     networks:
-      kronos-net:
+      servidor-net:
     ports:
       # HTTP
       - "80:80/tcp"
@@ -46,5 +46,5 @@ secrets:
     file: ./cf_api_token.txt
 
 networks:
-  kronos-net:
+  servidor-net:
     external: true

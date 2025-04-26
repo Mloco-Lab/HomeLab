@@ -1,7 +1,7 @@
 # Traefik
 
 ## Descripción General
-Traefik actúa como el punto de entrada principal para todos los servicios web en Kronos Server. Gestiona el enrutamiento, los certificados SSL y la seguridad básica.
+Traefik actúa como el punto de entrada principal para todos los servicios web en el Servidor. Gestiona el enrutamiento, los certificados SSL y la seguridad básica.
 
 ## Configuración
 

@@ -59,7 +59,7 @@ services:
 
 
     networks:
-      kronos-net:
+      servidor-net:
 
     ports:
       - "25:25"
@@ -67,5 +67,5 @@ services:
       - "993:993"
 
 networks:
-  kronos-net:
+  servidor-net:
     external: true

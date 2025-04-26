@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script de verificación de estado del sistema Kronos
+# Script de verificación de estado del sistema
 # Proporciona una vista general del estado de todos los servicios y recursos
 
 # Colores para output
@@ -109,7 +109,7 @@ check_logs() {
 # Función principal
 main() {
     echo -e "${BLUE}============================================${NC}"
-    echo -e "${BLUE}     Kronos Server - Reporte de Estado      ${NC}"
+    echo -e "${BLUE}     Estado del Sistema - Reporte      ${NC}"
     echo -e "${BLUE}============================================${NC}"
     echo -e "Fecha: $(date '+%Y-%m-%d %H:%M:%S')\n"
     

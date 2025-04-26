@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script de monitoreo para Kronos Server
+# Script de monitoreo para el Servidor
 # Monitorea recursos y servicios en tiempo real
 
 # Colores para output
@@ -12,7 +12,7 @@ NC='\033[0m'
 
 # Configuración
 UPDATE_INTERVAL=5  # segundos
-LOG_FILE="/home/mloco/kronos-server/logs/monitor.log"
+LOG_FILE="/home/mloco/servidor/logs/monitor.log"
 ALERT_THRESHOLD_CPU=80
 ALERT_THRESHOLD_MEM=80
 ALERT_THRESHOLD_DISK=80
@@ -29,7 +29,7 @@ log() {
 show_banner() {
     clear
     echo -e "${BLUE}============================================${NC}"
-    echo -e "${BLUE}       Kronos Server - Monitor v1.0         ${NC}"
+    echo -e "${BLUE}       Monitor del Servidor v1.0           ${NC}"
     echo -e "${BLUE}============================================${NC}"
     echo ""
 }

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script de mantenimiento para Kronos Server
+# Script de mantenimiento para el Servidor
 # Ejecuta tareas rutinarias de mantenimiento y monitoreo
 
 # Colores para output
@@ -10,7 +10,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m'
 
 # Directorio base
-BASE_DIR="/home/mloco/kronos-server"
+BASE_DIR="/home/mloco/servidor"
 LOG_DIR="${BASE_DIR}/logs"
 BACKUP_DIR="${BASE_DIR}/backups"
 

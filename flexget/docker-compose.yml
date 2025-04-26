@@ -7,7 +7,7 @@ services:
     container_name: flexget
     restart: unless-stopped
     networks:
-      kronos-net:
+      servidor-net:
 
     volumes:
       - ${FLEX_config}:/config
@@ -33,7 +33,7 @@ services:
       - "traefik.http.services.flexget.loadbalancer.server.port=5050"
 
 networks:
-  kronos-net:
+  servidor-net:
     external: true
 
 

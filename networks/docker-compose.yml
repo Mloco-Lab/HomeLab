@@ -1,17 +1,17 @@
-#version: '1'
+version: '3'
 
 services:
   network-creator:
     image: alpine:latest
     command: "true"
     networks:
-      - kronos-net
+      - servidor-net
 
 networks:
-  kronos-net:
+  servidor-net:
     driver: bridge
-    name: kronos-net
+    enable_ipv6: true
     ipam:
-      driver: default
       config:
         - subnet: 172.20.0.0/16
+        - subnet: fd00::/80

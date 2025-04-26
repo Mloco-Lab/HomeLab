@@ -1,10 +1,10 @@
-# Kronos Server
+# Servidor
 
 Este es un servidor Docker auto-gestionado que proporciona varios servicios fundamentales para una infraestructura doméstica.
 
 ## Estructura del Servidor
 
-El servidor está organizado en varios servicios independientes, cada uno en su propio directorio y gestionado por Docker Compose. La comunicación entre servicios se realiza a través de la red `kronos-net`.
+El servidor está organizado en varios servicios independientes, cada uno en su propio directorio y gestionado por Docker Compose. La comunicación entre servicios se realiza a través de la red `servidor-net`.
 
 ### Servicios Principales
 
@@ -12,7 +12,7 @@ El servidor está organizado en varios servicios independientes, cada uno en su 
 - Proxy inverso y balanceador de carga
 - Gestiona automáticamente certificados SSL/TLS con Cloudflare
 - Proporciona acceso seguro a todos los servicios web
-- Dashboard disponible en: `dashboard.kronos.cloudns.ph`
+- Dashboard disponible en: `dashboard.example.com`
 - Configuración almacenada en `data/traefik.yml`
 - Certificados SSL almacenados en `data/acme.json`
 
@@ -37,7 +37,7 @@ El servidor está organizado en varios servicios independientes, cada uno en su 
 - Base de datos PostgreSQL integrada
 - Redis para caché
 - Almacenamiento configurado en volumen dedicado
-- Accesible en: `immich.kronos.cloudns.ph`
+- Accesible en: `immich.example.com`
 
 ### Herramientas de Mantenimiento
 
@@ -70,7 +70,7 @@ La documentación completa del sistema está disponible en el directorio `docs/`
 - Manejo de dependencias entre servicios
 
 ### Red
-La red `kronos-net` conecta todos los servicios y está gestionada en el directorio `networks/`. Proporciona:
+La red `servidor-net` conecta todos los servicios y está gestionada en el directorio `networks/`. Proporciona:
 - Aislamiento de servicios
 - Comunicación interna segura
 - Resolución DNS interna

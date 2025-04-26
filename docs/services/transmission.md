@@ -1,7 +1,7 @@
 # Transmission
 
 ## Descripción General
-Transmission es un cliente BitTorrent ligero y eficiente que se utiliza como el motor principal de descargas en Kronos Server. Se integra con Flexget para la automatización de descargas.
+Transmission es un cliente BitTorrent ligero y eficiente que se utiliza como el motor principal de descargas en el Servidor. Se integra con Flexget para la automatización de descargas.
 
 ## Configuración
 

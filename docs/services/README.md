@@ -1,4 +1,4 @@
-# Servicios de Kronos Server
+# Servicios del Servidor
 
 ## Resumen de Servicios
 
@@ -126,7 +126,7 @@ Traefik ─── [Todos los servicios web]
 ## Mantenimiento
 
 ### Respaldos
-- Configuraciones en `/home/xxxx/kronos-server/*/config/`
+- Configuraciones en `/home/xxxx/servidor/*/config/`
 - Datos en `/mnt/storage/`
 - Bases de datos
 - Certificados SSL

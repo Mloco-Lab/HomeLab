@@ -1,7 +1,7 @@
 # Cloudflare
 
 ## Descripción General
-Cloudflare proporciona servicios de DNS, CDN y seguridad para Kronos Server. Se integra con Traefik para la gestión de certificados SSL y ofrece protección DDoS.
+Cloudflare proporciona servicios de DNS, CDN y seguridad para el Servidor. Se integra con Traefik para la gestión de certificados SSL y ofrece protección DDoS.
 
 ## Configuración
 

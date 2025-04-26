@@ -1,9 +1,9 @@
-# Networking en Kronos Server
+# Networking en Servidor
 
 ## Arquitectura de Red
 
 ### Red Principal
-- Nombre: `kronos-net`
+- Nombre: `servidor-net`
 - Driver: bridge
 - IPv6: habilitado
 - IPAM: automático
@@ -45,10 +45,10 @@ dns:
 ### Resolución Local
 ```plaintext
 # Entradas DNS locales
-portainer.example.com -> kronos-net
-immich.example.com   -> kronos-net
-plex.example.com     -> kronos-net
-mail.example.com     -> kronos-net
+portainer.example.com -> servidor-net
+immich.example.com   -> servidor-net
+plex.example.com     -> servidor-net
+mail.example.com     -> servidor-net
 ```
 
 ## Seguridad
@@ -76,7 +76,7 @@ security:
 ### Configuración Principal
 ```yaml
 networks:
-  kronos-net:
+  servidor-net:
     driver: bridge
     enable_ipv6: true
     ipam:
@@ -86,7 +86,7 @@ networks:
 ```
 
 ### Aislamiento
-- Servicios web en kronos-net
+- Servicios web en servidor-net
 - Base de datos en red interna
 - Redis en red interna
 - Comunicación restringida
@@ -132,8 +132,8 @@ alerts:
 
 ### Herramientas
 ```bash
-# Diagnóstico de red
-docker network inspect kronos-net
+# Diagnóstico de red 
+docker network inspect servidor-net
 netstat -tulpn
 tcpdump -i any port 80
 ping -c 4 portainer.example.com
@@ -153,8 +153,8 @@ ping -c 4 portainer.example.com
    # Verificar red Docker
    docker network ls
    # Reconectar contenedor
-   docker network disconnect kronos-net container
-   docker network connect kronos-net container
+   docker network disconnect servidor-net container
+   docker network connect servidor-net container
    ```
 
 ## Mantenimiento

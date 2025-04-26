@@ -39,11 +39,11 @@ docker restart <container_name>
 ```bash
 # Verificar redes Docker
 docker network ls
-docker network inspect kronos-net
+docker network inspect servidor-net
 
 # Reconectar contenedor
-docker network disconnect kronos-net <container>
-docker network connect kronos-net <container>
+docker network disconnect servidor-net <container>
+docker network connect servidor-net <container>
 ```
 
 ### Almacenamiento
@@ -150,6 +150,33 @@ traceroute example.com
 netstat -tulpn
 ss -tulpn
 ```
+
+### Herramientas
+```bash
+# Diagnóstico de red
+docker network inspect servidor-net
+netstat -tulpn
+tcpdump -i any port 80
+ping -c 4 portainer.example.com
+```
+
+### Problemas Comunes
+1. Resolución DNS
+   ```bash
+   # Verificar DNS
+   dig @pi-hole portainer.example.com
+   # Limpiar caché DNS
+   docker exec pi-hole pihole restartdns
+   ```
+
+2. Conectividad
+   ```bash
+   # Verificar red Docker
+   docker network ls
+   # Reconectar contenedor
+   docker network disconnect servidor-net container
+   docker network connect servidor-net container
+   ```
 
 ## Procedimientos de Recuperación
 

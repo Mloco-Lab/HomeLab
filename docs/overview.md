@@ -1,27 +1,16 @@
-# Visión General de Kronos Server
+# Visión General del Servidor
 
 ## Arquitectura del Sistema
 
-Kronos Server es una infraestructura de servicios auto-gestionada basada en Docker, diseñada para proporcionar una suite completa de servicios para un entorno doméstico o pequeña oficina.
+El Servidor es una infraestructura de servicios auto-gestionada basada en Docker, diseñada para proporcionar una suite completa de servicios para un entorno doméstico o pequeña oficina.
 
 ### Componentes Principales
 
-#### 1. Gestión de Tráfico y Seguridad
-- **Traefik**: Actúa como punto de entrada único para todos los servicios web
-- **Cloudflare**: Proporciona DNS dinámico y protección DDoS
-- **Pi-hole**: Ofrece filtrado DNS y bloqueo de anuncios a nivel de red
-
-#### 2. Servicios Multimedia
-- **Immich**: Gestión y almacenamiento de fotos con capacidades de ML
-- **Plex**: Servidor de streaming multimedia
-
-#### 3. Gestión de Descargas
-- **Transmission**: Cliente BitTorrent con interfaz web
-- **Flexget**: Automatización de descargas
-
-#### 4. Servicios de Sistema
-- **Portainer**: Gestión de contenedores Docker
-- **Poste.io**: Servidor de correo completo
+```plaintext
+                      ┌─── Traefik (Proxy) ───┐
+Internet ─── Router ──┤                       ├─── Servicios Web
+                      └─── Pi-hole (DNS) ─────┘
+```
 
 ### Estructura de Red
 
@@ -29,6 +18,19 @@ Kronos Server es una infraestructura de servicios auto-gestionada basada en Dock
 Internet ─── Router ─┬─ Traefik ─── Servicios Web
                     └─ Pi-hole ─── DNS interno
 ```
+
+### Servicios Base
+1. Traefik (Proxy inverso)
+2. Pi-hole (DNS y bloqueo de anuncios)
+3. Portainer (Gestión Docker)
+4. Cloudflare DDNS
+
+### Servicios Principales
+1. Immich (Fotos)
+2. Plex (Media)
+3. Transmission (Torrents)
+4. Flexget (Automatización)
+5. Poste.io (Email)
 
 ## Seguridad
 

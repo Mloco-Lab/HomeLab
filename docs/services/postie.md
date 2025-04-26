@@ -43,15 +43,14 @@ Web:
 
 ### DNS Records
 ```plaintext
-MX:
-  @ IN MX 10 mail.kronos.cloudns.ph.
+# MX Record
+@ IN MX 10 mail.example.com.
 
-A/AAAA:
-  mail IN A <IP-ADDRESS>
+# SPF Record
+@ IN TXT "v=spf1 a mx ip4:SERVER_IP ~all"
 
-TXT:
-  @ IN TXT "v=spf1 mx ~all"
-  _dmarc IN TXT "v=DMARC1; p=reject; rua=mailto:postmaster@kronos.cloudns.ph"
+# DMARC Record
+_dmarc IN TXT "v=DMARC1; p=reject; rua=mailto:postmaster@example.com"
 ```
 
 ## Seguridad
@@ -81,7 +80,7 @@ spamassassin:
 ```plaintext
 Selector: mail
 Bits: 2048
-Domain: kronos.cloudns.ph
+Domain: example.com
 ```
 
 ### SPF

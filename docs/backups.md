@@ -46,7 +46,7 @@ schedules:
 
 ### Sistema
 ```plaintext
-/home/xxxx/kronos-server/
+/home/xxxx/servidor/
 ├── */docker-compose.yml
 ├── */config/
 ├── */.env
@@ -72,7 +72,7 @@ schedules:
 #!/bin/bash
 # Respaldo del sistema
 backup_configs() {
-    tar -czf configs.tar.gz /home/xxxx/kronos-server/*/config/
+    tar -czf configs.tar.gz /home/xxxx/servidor/*/config/
 }
 
 backup_databases() {

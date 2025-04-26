@@ -39,7 +39,7 @@ certificatesResolvers:
 
   myresolver:
     acme:
-      email: mloco@kronos.cloudns.ph
+      email: admin@example.com
       storage: acme.json
       httpChallenge:
         entryPoint: http

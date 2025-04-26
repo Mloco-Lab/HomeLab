@@ -8,7 +8,7 @@ STORAGE=*****
 
 # Versión de Immich
 IMMICH_VERSION=*****
-IMMICH_URL=fotos.example.com
+IMMICH_URL=*****
 IMMICH_PUID=*****
 IMMICH_PGID=*****
 

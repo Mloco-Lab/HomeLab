@@ -12,9 +12,9 @@ services:
     env_file:
       - .env
     networks:
-      kronos-net:
+      servidor-net:
 
 networks:
-  kronos-net:
+  servidor-net:
     external: true
 

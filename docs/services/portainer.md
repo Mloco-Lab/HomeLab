@@ -1,7 +1,7 @@
 # Portainer
 
 ## Descripción General
-Portainer es una interfaz gráfica de gestión de contenedores Docker que proporciona una forma fácil de administrar contenedores, imágenes, redes y volúmenes en Kronos Server.
+Portainer es una interfaz gráfica de gestión de contenedores Docker que proporciona una forma fácil de administrar contenedores, imágenes, redes y volúmenes en el Servidor.
 
 ## Configuración
 
@@ -28,7 +28,7 @@ Portainer es una interfaz gráfica de gestión de contenedores Docker que propor
 ### Redes Docker
 ```yaml
 networks:
-  kronos-net:
+  servidor-net:
     driver: bridge
     internal: false
     enable_ipv6: true

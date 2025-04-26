@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     command: transmission-daemon -f -g /config
     networks:
-      kronos-net:
+      servidor-net:
 
     ports:
       - 9091:9091
@@ -29,5 +29,5 @@ services:
       - "traefik.http.services.transmission.loadbalancer.server.port=9091"
 
 networks:
-  kronos-net:
+  servidor-net:
     external: true

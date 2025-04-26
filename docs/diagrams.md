@@ -1,33 +1,21 @@
-# Diagramas de Arquitectura de Kronos Server
+# Diagramas de Arquitectura del Servidor
 
-## Arquitectura General
+## Diagrama de Red
 
 ```mermaid
-graph TB
-    Internet((Internet)) --> Router[Router]
-    Router --> Traefik[Traefik]
-    Router --> PiHole[Pi-hole]
-    
-    subgraph Red Kronos
-        Traefik --> WebServices[Servicios Web]
-        PiHole --> DNS[DNS Interno]
+graph TD
+    subgraph Red Servidor
+        Router[Router] --> Traefik[Traefik]
+        Router --> Pihole[Pi-hole]
         
-        subgraph WebServices
-            Portainer[Portainer]
-            Plex[Plex]
-            Immich[Immich]
-            Transmission[Transmission]
-            Flexget[Flexget]
-            Postie[Poste.io]
-        end
+        Traefik --> Web[Servicios Web]
+        Traefik --> Mail[Servicios Mail]
         
-        subgraph Almacenamiento
-            Storage[/mnt/storage/]
-            Storage --> Media[Media]
-            Storage --> Photos[Fotos]
-            Storage --> Downloads[Descargas]
-            Storage --> Backups[Respaldos]
-        end
+        Web --> Portainer[Portainer]
+        Web --> Plex[Plex]
+        Web --> Immich[Immich]
+        
+        Mail --> Postie[Poste.io]
     end
 ```
 
@@ -61,7 +49,7 @@ graph TB
         CF[Cloudflare]
     end
     
-    subgraph kronos-net
+    subgraph servidor-net
         TR[Traefik]
         PH[Pi-hole]
         

@@ -7,7 +7,7 @@ for service in "${services[@]}"; do
     echo "Deteniendo $service..."
     cd "$service" && docker-compose down
     cd ..
-    sleep 5
+    sleep 2
 done
 
 # Detenemos Traefik al final
@@ -16,7 +16,7 @@ cd traefik && docker-compose down
 cd ..
 
 # Finalmente detenemos la red
-echo "Deteniendo red kronos-net..."
+echo "Deteniendo red servidor-net..."
 cd networks && docker-compose down
 
 echo "¡Todos los servicios han sido detenidos!"

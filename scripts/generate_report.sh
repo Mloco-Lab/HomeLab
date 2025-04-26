@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script de generación de reportes para Kronos Server
+# Script de generación de reportes
 # Genera informes detallados del estado del sistema y servicios
 
 # Colores para output
@@ -11,7 +11,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 # Configuración
-BASE_DIR="/home/mloco/kronos-server"
+BASE_DIR="/home/mloco/servidor"
 REPORT_DIR="${BASE_DIR}/reports"
 DATE=$(date +%Y%m%d)
 TIME=$(date +%H%M)
@@ -140,7 +140,7 @@ generate_summary() {
 # Función principal
 main() {
     # Iniciar reporte
-    write_report "# Reporte del Sistema Kronos"
+    write_report "# Reporte del Sistema"
     write_report "Generado el: $(date '+%Y-%m-%d %H:%M:%S')"
     write_report ""
     

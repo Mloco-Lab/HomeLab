@@ -40,7 +40,7 @@ services:
       - "traefik.http.routers.immich-server.tls.certresolver=myresolver"
 
     networks:
-      kronos-net:
+      servidor-net:
 
     restart: always
     healthcheck:
@@ -66,7 +66,7 @@ services:
       disable: false
 
     networks:
-      kronos-net:
+      servidor-net:
 
   redis:
     container_name: immich_redis
@@ -76,7 +76,7 @@ services:
     restart: always
 
     networks:
-      kronos-net:
+      servidor-net:
 
   database:
     container_name: immich_postgres
@@ -110,12 +110,12 @@ services:
     restart: always
 
     networks:
-      kronos-net:
+      servidor-net:
 
 volumes:
   model-cache:
 
 networks:
-  kronos-net:
+  servidor-net:
     external: true
 

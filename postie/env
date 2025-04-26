@@ -1,0 +1,10 @@
+# Archivo de configuración para el servicio correspondiente
+
+# Configuración del dominio de correo
+POSTEIO_HOSTNAME=*****
+
+# Configuración de la base de datos
+POSTEIO_BASE_DADOS=*****
+
+# Timezone
+POSTEIO_TZ=*****

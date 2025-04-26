@@ -1,0 +1,7 @@
+# Archivo de configuración para el servicio correspondiente
+
+#ruta donde van a ir los archivos descargados
+TRANS_STORANGE=*****
+
+#Url de la API
+TRANS_URL=*****

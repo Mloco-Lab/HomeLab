@@ -1,0 +1,21 @@
+# Archivo de configuración para el servicio correspondiente
+
+# Directorios principales
+# Ruta donde se descargan los archivos del torrent antes de renombrarse
+STORAGE=*****
+# Ruta donde se almacenan los archivos renombrados por Filebot
+MEDIA=*****
+
+# Zona horaria
+TZ=*****
+
+# Usuario y grupo para los servicios
+PUID=*****
+PGID=*****
+
+# Usuario y contraseña
+USER=*****
+PASS=*****
+
+# Dirección del servidor
+SERVER_URL=*****

@@ -1,7 +1,7 @@
 # Pi-hole
 
 ## Descripción General
-Pi-hole funciona como servidor DNS y bloqueador de anuncios a nivel de red para todo el sistema Kronos Server. Se integra con systemd-resolved y proporciona filtrado DNS avanzado.
+Pi-hole funciona como servidor DNS y bloqueador de anuncios a nivel de red para todo el sistema. Se integra con systemd-resolved y proporciona filtrado DNS avanzado.
 
 ## Configuración
 
