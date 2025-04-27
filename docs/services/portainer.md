@@ -1,182 +1,184 @@
 # Portainer
 
 ## Descripción General
-Portainer es una interfaz gráfica de gestión de contenedores Docker que proporciona una forma fácil de administrar contenedores, imágenes, redes y volúmenes en el Servidor.
 
-## Configuración
+Interfaz de gestión para Docker, permitiendo administrar contenedores, imágenes, redes y volúmenes a través de una interfaz web.
+
+## Configuración Base
 
 ### Ubicación
+
 - Directorio: `/portainer/`
-- Archivos principales:
-  - `docker-compose.yml`: Configuración del contenedor
-  - Volumen persistente para datos
+- Datos: `/data/`
+- Configuración: `/config/`
 
 ### Acceso
-- URL: `portainer.example.com`
-- Puerto: 9000 (interno)
-- SSL vía Traefik
-- Autenticación requerida
 
-## Características Principales
+- URL: `portainer.example.com`
+- Puerto: 9000
+- SSL/TLS vía Traefik
+
+## Gestión
 
 ### Gestión de Contenedores
+
 - Creación/eliminación
-- Inicio/parada
-- Monitoreo en tiempo real
-- Logs y estadísticas
+- Start/stop/restart
+- Monitoreo de estado
+- Logs en tiempo real
 
 ### Redes Docker
+
 ```yaml
 networks:
   servidor-net:
-    driver: bridge
-    internal: false
-    enable_ipv6: true
+    external: true
+  interno:
+    internal: true
 ```
 
 ### Volúmenes
+
 - Listado de volúmenes
 - Backup/restore
-- Limpieza
+- Limpieza automática
 - Monitoreo de espacio
 
-## Seguridad
+### Ajustes del Sistema
 
-### Configuración
 ```yaml
-security:
-  # Configuración SSL
+settings:
   ssl: true
-  ssl_cert: /certs/portainer.crt
-  ssl_key: /certs/portainer.key
-  
-  # Autenticación
-  admin_password: <hash>
-  authentication_method: internal
+  template_version: 2
+  edge_enabled: false
+  snapshot_interval: 5m
+  allow_bindmounts: false
+  allow_privileged: false
 ```
 
 ### Control de Acceso
+
 - Usuarios y equipos
-- Roles personalizados
-- LDAP (opcional)
-- OAuth2 (opcional)
+- Roles y permisos
+- Autenticación LDAP
+- 2FA habilitado
 
 ## Monitoreo
 
 ### Métricas de Sistema
+
 - CPU por contenedor
 - Memoria utilizada
-- I/O de disco
-- Tráfico de red
+- I/O de red
+- Uso de disco
 
 ### Alertas
+
 ```yaml
 alerts:
   - type: container_down
-    notify: true
-    channels: ['email', 'webhook']
+    severity: high
+    notify: ["email", "webhook"]
   - type: high_cpu
-    threshold: 80
+    threshold: 90
     duration: 5m
 ```
 
 ## Mantenimiento
 
 ### Tareas Automáticas
+
 1. Limpieza de imágenes
-2. Actualización de contenedores
-3. Respaldo de configuración
+2. Pruning de volúmenes
+3. Backup de configuración
 4. Rotación de logs
 
 ### Backups
+
 ```bash
-# Directorios a respaldar
-/data/portainer/
-├── certs/
-├── compose/
-└── config.json
+# Backup de configuración
+tar -czf portainer_config.tar.gz /portainer/data
+
+# Backup de stacks
+docker run --rm -v portainer_data:/data \
+  -v $(pwd):/backup alpine tar -czf /backup/stacks.tar.gz /data/stacks
 ```
 
-## Gestión de Stacks
-
 ### Ejemplo de Stack
+
 ```yaml
 version: '3.8'
 services:
-  webapp:
-    image: nginx
+  app:
+    image: nginx:alpine
+    networks:
+      - servidor-net
     deploy:
-      replicas: 2
-      resources:
-        limits:
-          cpus: '0.50'
-          memory: 512M
+      labels:
+        - "traefik.enable=true"
 ```
 
-### Templates
-- Templates personalizados
-- App Templates
-- Stack Templates
-- Container Templates
+## Operaciones
 
-## Resolución de Problemas
+### Templates
+
+- Templates personalizados
+- Auto-actualización
+- Variables predefinidas
+- Stacks compuestos
 
 ### Problemas Comunes
+
 1. Problemas de acceso:
+
    ```bash
-   # Verificar estado
+   # Verificar logs
    docker logs portainer
+   
    # Reiniciar servicio
    docker restart portainer
    ```
 
-2. Problemas de recursos:
-   ```bash
-   # Limpiar recursos
-   docker system prune -a
-   ```
-
 ### Diagnóstico
+
 - Estado de contenedores
 - Logs del sistema
-- Uso de recursos
-- Conectividad de red
-
-## Recuperación
+- Métricas activas
+- Eventos Docker
 
 ### Plan de Recuperación
-1. Backup de datos
-   ```bash
-   # Respaldar volumen
-   docker run --rm -v portainer_data:/data \
-     -v /backup:/backup alpine \
-     tar czf /backup/portainer.tar.gz /data
-   ```
 
-2. Restauración
+1. Backup de datos:
+
    ```bash
-   # Restaurar volumen
+   # Backup completo
    docker run --rm -v portainer_data:/data \
-     -v /backup:/backup alpine \
-     tar xzf /backup/portainer.tar.gz -C /
+     -v $(pwd):/backup alpine tar -czf /backup/portainer_full.tar.gz /data
+   
+   # Restaurar
+   docker run --rm -v portainer_data:/data \
+     -v $(pwd):/backup alpine sh -c "rm -rf /data/* && tar -xzf /backup/portainer_full.tar.gz -C /"
    ```
 
 ## Mejores Prácticas
 
-### Seguridad
-- Cambiar contraseña por defecto
-- Usar SSL/TLS
-- Limitar acceso por IP
-- Actualizar regularmente
+### Políticas de Seguridad
 
-### Rendimiento
+- Cambiar contraseña por defecto
+- Habilitar 2FA
+- Limitar acceso por IP
+- Auditar accesos
+
+### Optimización
+
 - Limitar número de contenedores
-- Monitorear uso de recursos
-- Limpiar recursos no utilizados
-- Optimizar networking
+- Programar pruning
+- Monitorear recursos
+- Cache de imágenes
 
 ### Organización
+
 - Usar etiquetas descriptivas
-- Mantener documentación
-- Seguir convenciones de nombres
+- Agrupar por stacks
+- Documentar cambios
 - Gestionar stacks eficientemente

@@ -1,184 +1,210 @@
 # Transmission
 
 ## Descripción General
-Transmission es un cliente BitTorrent ligero y eficiente que se utiliza como el motor principal de descargas en el Servidor. Se integra con Flexget para la automatización de descargas.
 
-## Configuración
+Cliente BitTorrent con interfaz web, gestión de descargas y monitoreo de recursos.
+
+## Configuración Base
 
 ### Ubicación
+
 - Directorio: `/transmission/`
-- Archivos principales:
-  - `docker-compose.yml`: Configuración del contenedor
-  - `transmission/settings.json`: Configuración del cliente
+- Datos: `/transmission/`
+- Configuración: `/transmission/settings.json`
 
 ### Estructura
+
 ```plaintext
 transmission/
-├── docker-compose.yml
-└── transmission/
-    ├── settings.json
-    ├── stats.json
-    ├── blocklists/
-    ├── resume/
-    └── torrents/
+├── config/
+│   ├── settings.json
+│   └── stats.json
+├── downloads/
+│   ├── complete/
+│   └── incomplete/
+└── watch/
 ```
 
 ### Variables de Entorno
+
 ```plaintext
 PUID=1000
 PGID=1000
 TZ=Europe/Madrid
-TRANSMISSION_WEB_HOME=/combustion-release/
-TRANSMISSION_RPC_USERNAME=admin
-TRANSMISSION_RPC_PASSWORD=<password>
+TRANSMISSION_WEB_HOME=/transmission-web-home/
 ```
 
 ### Puertos
-- 9091: Interfaz web
-- 51413: Puerto BitTorrent (TCP/UDP)
 
-## Directorios de Trabajo
+- 9091: Interfaz web
+- 51413: BitTorrent (TCP)
+- 51413: BitTorrent (UDP)
+
+## Almacenamiento
 
 ### Estructura de Almacenamiento
+
 ```plaintext
-/mnt/storage/
+/transmission/
 ├── downloads/
-│   ├── complete/
-│   ├── incomplete/
-│   └── watch/
-└── media/
-    ├── movies/
-    ├── tv/
-    └── music/
+│   ├── complete/       # Descargas finalizadas
+│   └── incomplete/     # Descargas en proceso
+├── watch/             # Monitoreo de .torrent
+└── config/            # Configuración
 ```
 
 ### Permisos
+
 - Usuario: 1000 (transmission)
 - Grupo: 1000 (transmission)
-- Directorios: 775
-- Archivos: 664
+- Modo: 755 directorios
+- Modo: 644 archivos
 
-## Integración con Flexget
+## Configuración Avanzada
 
 ### Configuración RPC
+
 ```yaml
-rpc-enabled: true
-rpc-bind-address: "0.0.0.0"
-rpc-whitelist-enabled: false
-rpc-host-whitelist-enabled: false
+rpc-settings:
+  rpc-authentication-required: true
+  rpc-username: "admin"
+  rpc-password: "encrypted-password"
+  rpc-whitelist-enabled: true
+  rpc-whitelist: "127.0.0.1,192.168.1.*"
 ```
 
 ### API Settings
-- URL: `http://transmission:9091/transmission/rpc`
-- Autenticación: Básica
-- Límites de velocidad configurables
 
-## Seguridad
+- URL: `http://transmission:9091/transmission/rpc`
+- Autenticación: Basic Auth
+- Timeout: 30s
+- Retry: 3
 
 ### Acceso
+
 - Autenticación requerida
-- Lista blanca de IPs
-- SSL/TLS vía Traefik
+- HTTPS vía Traefik
+- Whitelist de IPs
+- Rate limiting
 
 ### Blocklists
-- Actualización automática
-- Múltiples fuentes
-- Rotación programada
 
-## Rendimiento
+- Actualización automática
+- Fuentes verificadas
+- Formato P2P
+- Rotación semanal
+
+## Optimización
 
 ### Ajustes Recomendados
+
 ```json
 {
-    "cache-size-mb": 512,
-    "queue-stalled-minutes": 30,
-    "ratio-limit": 2.0,
-    "ratio-limit-enabled": true
+  "speed-limit-down": 10000,
+  "speed-limit-up": 5000,
+  "alt-speed-enabled": true,
+  "alt-speed-time-enabled": true,
+  "alt-speed-time-begin": 480,
+  "alt-speed-time-end": 1380,
+  "download-queue-size": 5,
+  "queue-stalled-enabled": true,
+  "incomplete-dir-enabled": true
 }
 ```
 
 ### Límites
+
 - Descargas simultáneas: 5
-- Subidas simultáneas: 10
-- Caché: 512MB
-- Ratio global: 2.0
+- Máx. conexiones: 200
+- Máx. peers: 50
+- Cache: 512MB
 
 ## Monitoreo
 
 ### Logs
+
 ```bash
 # Ver logs en tiempo real
 docker logs -f transmission
+
+# Filtrar errores
+docker logs transmission | grep ERROR
 ```
 
 ### Métricas
+
 - Velocidad de descarga/subida
-- Ratio por torrent
-- Espacio en disco
-- Estado de la cola
+- Ratio global/individual
+- Espacio utilizado
+- Peers conectados
 
 ## Mantenimiento
 
 ### Tareas Programadas
+
 1. Limpieza de torrents completados
 2. Actualización de blocklists
-3. Optimización de base de datos
-4. Verificación de espacio
+3. Verificación de datos
+4. Backup de configuración
 
 ### Scripts de Mantenimiento
-```bash
-# Limpiar torrents antiguos
-transmission-remote -n 'user:pass' --torrent-done-seeding
 
-# Actualizar blocklists
-transmission-remote -n 'user:pass' --blocklist-update
+```bash
+#!/bin/bash
+# Limpieza de torrents antiguos
+find /transmission/downloads/complete -mtime +30 -exec rm -rf {} \;
+
+# Verificación de espacio
+df -h /transmission/downloads
 ```
 
-## Resolución de Problemas
+## Solución de Problemas
 
 ### Problemas Comunes
+
 1. Puerto bloqueado:
+
    ```bash
    # Verificar puerto
-   netstat -tuln | grep 51413
-   ```
-
-2. Problemas de permisos:
-   ```bash
-   # Corregir permisos
-   chown -R transmission:transmission /mnt/storage/downloads
+   netstat -tulpn | grep 51413
+   
+   # Probar conectividad
+   nc -vz localhost 51413
    ```
 
 ### Verificaciones
+
 - Conectividad de red
 - Espacio disponible
+- Permisos correctos
 - Estado del servicio
-- Logs de errores
-
-## Recuperación
 
 ### Respaldo
+
 - settings.json
-- stats.json
-- Base de datos de torrents
-- Blocklists personalizadas
+- blocklists
+- estadísticas
+- torrents activos
 
 ### Restauración
+
 1. Detener servicio
-2. Restaurar configuración
+2. Restaurar configs
 3. Verificar permisos
-4. Reiniciar servicio
+4. Reiniciar Transmission
 
 ## Mejores Prácticas
 
-### Rendimiento
+### Optimización de Recursos
+
 - Usar disco rápido para incompletos
-- Configurar caché adecuadamente
-- Limitar conexiones máximas
-- Habilitar DHT y PEX
+- Limitar ancho de banda
+- Configurar caché
+- Priorizar descargas
 
 ### Organización
+
 - Estructura de carpetas clara
 - Nombrado consistente
-- Separar completos/incompletos
+- Categorización
 - Mantener ratio saludable

@@ -23,6 +23,7 @@ Esta documentación proporciona información detallada sobre todos los servicios
 ## Propósito
 
 Esta documentación está diseñada para ayudar en:
+
 - La comprensión de la arquitectura del sistema
 - La configuración y mantenimiento de servicios
 - La resolución de problemas comunes

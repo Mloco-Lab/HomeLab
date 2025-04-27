@@ -1,192 +1,177 @@
 # Poste.io
 
 ## Descripción General
-Poste.io es una solución completa de servidor de correo que incluye servicios SMTP, IMAP, POP3, y una interfaz web de administración. Está diseñado para ser fácil de configurar y mantener.
 
-## Servicios
+Servidor de correo completo con soporte IMAP/SMTP y webmail.
 
 ### Componentes Principales
+
 1. Postfix (SMTP)
 2. Dovecot (IMAP/POP3)
-3. Roundcube (Webmail)
+3. Rspamd (Anti-spam)
 4. ClamAV (Antivirus)
-5. SpamAssassin (Anti-spam)
-6. OpenDKIM (Autenticación)
-
-## Configuración
 
 ### Ubicación
+
 - Directorio: `/postie/`
-- Archivos principales:
-  - `docker-compose.yml`: Configuración del contenedor
-  - Volúmenes persistentes para datos y configuración
+- Datos: `/data/`
+- Configuración: `/config/`
 
 ### Puertos
+
 ```plaintext
-SMTP:
-- 25: SMTP entrante
-- 465: SMTP sobre SSL
-- 587: SMTP con STARTTLS
-
-IMAP:
-- 143: IMAP
-- 993: IMAPS (SSL)
-
-POP3:
-- 110: POP3
-- 995: POP3S (SSL)
-
-Web:
-- 80: HTTP (redirigido a HTTPS)
-- 443: HTTPS
+25   - SMTP
+465  - SMTPS
+587  - Submission
+993  - IMAPS
+995  - POP3S
 ```
 
 ### DNS Records
+
 ```plaintext
-# MX Record
-@ IN MX 10 mail.example.com.
-
-# SPF Record
-@ IN TXT "v=spf1 a mx ip4:SERVER_IP ~all"
-
-# DMARC Record
-_dmarc IN TXT "v=DMARC1; p=reject; rua=mailto:postmaster@example.com"
+mail.example.com.    IN A     xxx.xxx.xxx.xxx
+example.com.         IN MX 10 mail.example.com.
+_dmarc               IN TXT   "v=DMARC1; p=reject; rua=mailto:admin@example.com"
 ```
 
-## Seguridad
-
 ### SSL/TLS
+
 - Certificados gestionados por Traefik
-- Forzar SSL/TLS en todos los servicios
-- STARTTLS habilitado
+- TLS 1.2/1.3 habilitado
+- STARTTLS requerido
+- Perfect Forward Secrecy
 
 ### Anti-spam
+
 ```yaml
-spamassassin:
-  required_score: 5.0
-  rewrite_header:
-    Subject: "[SPAM] "
-  report_safe: 0
+rspamd:
+  actions:
+    reject: 15
+    add_header: 6
+    greylist: 4
+  checks:
+    - spf
+    - dkim
+    - dmarc
+    - rbl
 ```
 
 ### Antivirus
-- Escaneo en tiempo real
-- Actualización automática de firmas
-- Cuarentena configurable
 
-## Autenticación
+- Escaneo en tiempo real
+- Actualización automática
+- Cuarentena integrada
+- Notificaciones configurables
 
 ### DKIM
+
 ```plaintext
-Selector: mail
-Bits: 2048
-Domain: example.com
+selector._domainkey.example.com. IN TXT "v=DKIM1; k=rsa; p=MII..."
 ```
 
 ### SPF
+
 - Strict mode
-- Limitar a IPs autorizadas
-- Monitoreo de fallos
+- include:_spf.example.com
+- ip4:xxx.xxx.xxx.xxx
+- ~all
 
 ### DMARC
-- Política: reject
-- Reportes habilitados
-- Subdomains incluidos
 
-## Mantenimiento
+- Política: reject
+- Reportes: `admin@example.com`
+- Subdomains: yes
+- Porcentaje: 100
+
+## Operaciones
 
 ### Respaldos
+
 1. Correos
-   ```bash
-   /var/mail/
-   /var/vmail/
-   ```
 
-2. Configuración
    ```bash
-   /etc/postfix/
-   /etc/dovecot/
-   ```
-
-3. Base de datos
-   ```bash
-   /var/lib/mysql/
+   # Backup de correos
+   tar -czf maildir_backup.tar.gz /data/vmail
+   
+   # Backup de configuración
+   tar -czf config_backup.tar.gz /config
+   
+   # Backup de base de datos
+   docker exec postie mysqldump -u root mailserver > db_backup.sql
    ```
 
 ### Logs
-- Mail logs
-- Auth logs
-- Spam logs
-- Error logs
 
-## Monitoreo
+- Mail logs
+- Authentication logs
+- Spam/virus logs
+- Access logs
 
 ### Métricas
+
 - Correos enviados/recibidos
-- Tasa de spam
+- Spam detectado
+- Virus bloqueados
 - Uso de almacenamiento
-- Estado de colas
 
 ### Alertas
-- Errores de entrega
-- Espacio bajo
-- Blacklisting
-- Fallos de autenticación
 
-## Resolución de Problemas
+- Errores de entrega
+- Intentos de spam
+- Detecciones de virus
+- Espacio insuficiente
 
 ### Problemas Comunes
+
 1. Problemas de entrega:
+
    ```bash
    # Verificar cola
-   postqueue -p
+   docker exec postie postqueue -p
    
    # Forzar envío
-   postqueue -f
-   ```
-
-2. Problemas de autenticación:
-   ```bash
-   # Verificar logs
-   tail -f /var/log/mail.log
+   docker exec postie postqueue -f
    ```
 
 ### Diagnóstico
-- Verificar registros DNS
-- Comprobar blacklists
-- Revisar logs
-- Test de conexión
 
-## Recuperación
+- Verificar registros DNS
+- Comprobar certificados
+- Revisar blacklists
+- Testear conexiones
 
 ### Plan de Recuperación
+
 1. Respaldar datos
-2. Restaurar configuración
-3. Verificar DNS
-4. Probar servicios
+2. Detener servicios
+3. Restaurar desde backup
+4. Verificar integridad
 
 ### Verificación
+
 - SMTP entrante/saliente
-- IMAP/POP3
-- Webmail
-- Antivirus/Spam
+- IMAP/POP3 acceso
+- Webmail funcional
+- Filtros activos
 
-## Mejores Prácticas
+### Mantenimiento
 
-### Configuración
-- Límites de tamaño
-- Políticas de retención
-- Cuotas de usuario
-- Filtros de contenido
+- Limpieza periódica
+- Optimización de índices
+- Rotación de logs
+- Actualización de firmas
 
 ### Seguridad
+
 - Actualizaciones regulares
-- Monitoreo de reputación
+- Monitoreo de accesos
 - Backups cifrados
-- Acceso restringido
+- Políticas estrictas
 
 ### Rendimiento
+
 - Optimizar caché
-- Gestionar colas
-- Limpiar logs
+- Ajustar recursos
 - Mantener índices
+- Limpiar colas

@@ -5,6 +5,7 @@
 ### DNS y Resolución de Nombres
 
 #### Pi-hole No Responde
+
 ```bash
 # Verificar servicio
 docker logs pihole
@@ -17,6 +18,7 @@ dig @pi-hole example.com
 ```
 
 #### Problemas de Resolución Local
+
 1. Verificar `/etc/resolv.conf`
 2. Comprobar configuración de Pi-hole
 3. Verificar registros en Cloudflare
@@ -24,6 +26,7 @@ dig @pi-hole example.com
 ### Servicios Docker
 
 #### Contenedor No Inicia
+
 ```bash
 # Verificar logs
 docker logs <container_name>
@@ -36,6 +39,7 @@ docker restart <container_name>
 ```
 
 #### Problemas de Red
+
 ```bash
 # Verificar redes Docker
 docker network ls
@@ -49,6 +53,7 @@ docker network connect servidor-net <container>
 ### Almacenamiento
 
 #### Espacio Insuficiente
+
 ```bash
 # Verificar uso de disco
 df -h
@@ -60,6 +65,7 @@ docker volume prune
 ```
 
 #### Permisos Incorrectos
+
 ```bash
 # Corregir permisos
 chown -R user:group /path
@@ -69,6 +75,7 @@ chmod -R 755 /directory
 ### Base de Datos
 
 #### PostgreSQL (Immich)
+
 ```bash
 # Verificar conexión
 docker exec -it immich_postgres psql -U postgres -d immich -c "\l"
@@ -78,6 +85,7 @@ docker exec -it immich_postgres vacuumdb -a -f -z
 ```
 
 #### SQLite (Flexget)
+
 ```bash
 # Compactar base de datos
 docker exec flexget sqlite3 db-config.sqlite "VACUUM;"
@@ -86,6 +94,7 @@ docker exec flexget sqlite3 db-config.sqlite "VACUUM;"
 ### SSL/Certificados
 
 #### Problemas con Certificados
+
 ```bash
 # Verificar certificados
 docker exec traefik traefik show certificates
@@ -97,7 +106,9 @@ docker exec traefik traefik show certificates --refresh
 ### Servicios Específicos
 
 #### Immich
+
 1. Problemas de ML
+
    ```bash
    # Verificar GPU
    nvidia-smi
@@ -106,19 +117,23 @@ docker exec traefik traefik show certificates --refresh
    ```
 
 2. Problemas de transcoding
+
    ```bash
    # Limpiar caché
    rm -rf /mnt/storage/photos/encoded/*
    ```
 
 #### Plex
+
 1. Problemas de biblioteca
+
    ```bash
    # Escanear biblioteca
    docker exec plex curl http://localhost:32400/library/sections/all/refresh
    ```
 
 2. Problemas de transcoding
+
    ```bash
    # Limpiar caché de transcoding
    rm -rf /transcode/temp/*
@@ -127,6 +142,7 @@ docker exec traefik traefik show certificates --refresh
 ## Diagnóstico General
 
 ### Verificación de Sistema
+
 ```bash
 # Estado de servicios
 docker ps -a
@@ -141,6 +157,7 @@ journalctl -xe
 ```
 
 ### Verificación de Red
+
 ```bash
 # Conectividad
 ping -c 4 1.1.1.1
@@ -152,6 +169,7 @@ ss -tulpn
 ```
 
 ### Herramientas
+
 ```bash
 # Diagnóstico de red
 docker network inspect servidor-net
@@ -161,7 +179,9 @@ ping -c 4 portainer.example.com
 ```
 
 ### Problemas Comunes
+
 1. Resolución DNS
+
    ```bash
    # Verificar DNS
    dig @pi-hole portainer.example.com
@@ -170,6 +190,7 @@ ping -c 4 portainer.example.com
    ```
 
 2. Conectividad
+
    ```bash
    # Verificar red Docker
    docker network ls
@@ -181,6 +202,7 @@ ping -c 4 portainer.example.com
 ## Procedimientos de Recuperación
 
 ### Servicios Críticos
+
 1. DNS (Pi-hole)
    - Restaurar desde backup
    - Verificar resolución
@@ -192,6 +214,7 @@ ping -c 4 portainer.example.com
    - Comprobar SSL
 
 ### Datos de Usuario
+
 1. Bases de datos
    - Restaurar desde backup
    - Verificar integridad
@@ -205,6 +228,7 @@ ping -c 4 portainer.example.com
 ## Monitoreo y Alertas
 
 ### Sistema de Alertas
+
 ```yaml
 alerts:
   service_down:
@@ -221,6 +245,7 @@ alerts:
 ```
 
 ### Logs Centralizados
+
 - Recolección centralizada
 - Rotación automática
 - Análisis de patrones
@@ -229,18 +254,21 @@ alerts:
 ## Mejores Prácticas
 
 ### Preventivo
+
 - Monitoreo proactivo
 - Mantenimiento regular
 - Respaldos verificados
 - Documentación actualizada
 
 ### Reactivo
+
 - Plan de respuesta
 - Procedimientos documentados
 - Herramientas preparadas
 - Contactos de emergencia
 
 ### Documentación
+
 - Registrar incidentes
 - Actualizar soluciones
 - Mantener procedimientos

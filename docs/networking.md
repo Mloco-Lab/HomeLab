@@ -3,12 +3,14 @@
 ## Arquitectura de Red
 
 ### Red Principal
+
 - Nombre: `servidor-net`
 - Driver: bridge
 - IPv6: habilitado
 - IPAM: automático
 
 ### Diagrama de Red
+
 ```plaintext
 Internet
     │
@@ -31,6 +33,7 @@ Internet
 ## Configuración DNS
 
 ### Pi-hole
+
 ```yaml
 # Configuración DNS
 dns:
@@ -43,6 +46,7 @@ dns:
 ```
 
 ### Resolución Local
+
 ```plaintext
 # Entradas DNS locales
 portainer.example.com -> servidor-net
@@ -54,6 +58,7 @@ mail.example.com     -> servidor-net
 ## Seguridad
 
 ### Traefik
+
 ```yaml
 # Configuración de seguridad
 security:
@@ -66,6 +71,7 @@ security:
 ```
 
 ### Firewall
+
 - Puertos expuestos mínimos
 - Reglas específicas por servicio
 - Bloqueo de puertos no utilizados
@@ -74,6 +80,7 @@ security:
 ## Redes Docker
 
 ### Configuración Principal
+
 ```yaml
 networks:
   servidor-net:
@@ -86,6 +93,7 @@ networks:
 ```
 
 ### Aislamiento
+
 - Servicios web en servidor-net
 - Base de datos en red interna
 - Redis en red interna
@@ -94,6 +102,7 @@ networks:
 ## Gestión de Tráfico
 
 ### Límites de Ancho de Banda
+
 ```yaml
 # Configuración de QoS
 qos:
@@ -106,6 +115,7 @@ qos:
 ```
 
 ### Priorización
+
 1. Servicios críticos (email, DNS)
 2. Streaming (Plex)
 3. Descargas (Transmission)
@@ -114,12 +124,14 @@ qos:
 ## Monitoreo
 
 ### Métricas
+
 - Tráfico por servicio
 - Latencia de red
 - Uso de ancho de banda
 - Estado de conexiones
 
 ### Alertas
+
 ```yaml
 alerts:
   network:
@@ -131,8 +143,9 @@ alerts:
 ## Resolución de Problemas
 
 ### Herramientas
+
 ```bash
-# Diagnóstico de red 
+# Diagnóstico de red
 docker network inspect servidor-net
 netstat -tulpn
 tcpdump -i any port 80
@@ -140,7 +153,9 @@ ping -c 4 portainer.example.com
 ```
 
 ### Problemas Comunes
+
 1. Resolución DNS
+
    ```bash
    # Verificar DNS
    dig @pi-hole portainer.example.com
@@ -149,6 +164,7 @@ ping -c 4 portainer.example.com
    ```
 
 2. Conectividad
+
    ```bash
    # Verificar red Docker
    docker network ls
@@ -160,12 +176,14 @@ ping -c 4 portainer.example.com
 ## Mantenimiento
 
 ### Tareas Periódicas
+
 1. Verificar estado de red
 2. Actualizar reglas de firewall
 3. Rotar logs de red
 4. Optimizar rutas
 
 ### Backups
+
 - Configuración de red
 - Reglas de firewall
 - DNS records
@@ -173,19 +191,22 @@ ping -c 4 portainer.example.com
 
 ## Mejores Prácticas
 
-### Seguridad
+### Protección y Seguridad
+
 - Minimizar exposición
 - Usar SSL/TLS
 - Implementar WAF
 - Monitorear accesos
 
 ### Rendimiento
+
 - Optimizar rutas
 - Balancear carga
 - Gestionar caché
 - Comprimir tráfico
 
 ### Documentación
+
 - Diagramas actualizados
 - Registro de cambios
 - Procedimientos documentados
